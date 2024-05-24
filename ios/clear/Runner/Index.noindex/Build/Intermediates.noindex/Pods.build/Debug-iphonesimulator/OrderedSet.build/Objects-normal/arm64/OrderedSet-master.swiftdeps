@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)"
+options: "14ccd513b6887401b46ab02503ad4be9d5555ff7f98ca2dc1e33dbb71becfc9f"
+build_start_time: [1717044224, 450995000]
+build_end_time: [1717044224, 470786000]
+inputs:
+  "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/Pods/OrderedSet/Sources/OrderedSet.swift": !dirty [1716980173, 771955001]

@@ -1,0 +1,15 @@
+{
+  "" : {
+    "dependencies" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/path_provider_foundation-master.d",
+    "diagnostics" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/path_provider_foundation-master.dia",
+    "emit-module-dependencies" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/path_provider_foundation-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/path_provider_foundation-master-emit-module.dia",
+    "swift-dependencies" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/path_provider_foundation-master.swiftdeps"
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.0/darwin/path_provider_foundation/Sources/path_provider_foundation/messages.g.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.0/darwin/path_provider_foundation/Sources/path_provider_foundation/PathProviderPlugin.swift" : {
+
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "" : {
+    "dependencies" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/OrderedSet.build/Objects-normal/arm64/OrderedSet-master.d",
+    "diagnostics" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/OrderedSet.build/Objects-normal/arm64/OrderedSet-master.dia",
+    "emit-module-dependencies" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/OrderedSet.build/Objects-normal/arm64/OrderedSet-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/OrderedSet.build/Objects-normal/arm64/OrderedSet-master-emit-module.dia",
+    "swift-dependencies" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/OrderedSet.build/Objects-normal/arm64/OrderedSet-master.swiftdeps"
+  },
+  "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/Pods/OrderedSet/Sources/OrderedSet.swift" : {
+
+  }
+}

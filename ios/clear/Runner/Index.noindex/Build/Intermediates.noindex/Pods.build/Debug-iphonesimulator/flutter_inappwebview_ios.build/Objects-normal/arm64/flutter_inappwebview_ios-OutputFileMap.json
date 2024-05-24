@@ -1,0 +1,405 @@
+{
+  "" : {
+    "dependencies" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/flutter_inappwebview_ios.build/Objects-normal/arm64/flutter_inappwebview_ios-master.d",
+    "diagnostics" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/flutter_inappwebview_ios.build/Objects-normal/arm64/flutter_inappwebview_ios-master.dia",
+    "emit-module-dependencies" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/flutter_inappwebview_ios.build/Objects-normal/arm64/flutter_inappwebview_ios-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/flutter_inappwebview_ios.build/Objects-normal/arm64/flutter_inappwebview_ios-master-emit-module.dia",
+    "swift-dependencies" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/flutter_inappwebview_ios.build/Objects-normal/arm64/flutter_inappwebview_ios-master.swiftdeps"
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/CredentialDatabase.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/FindInteraction/FindInteractionChannelDelegate.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/FindInteraction/FindInteractionController.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/FindInteraction/FindInteractionSettings.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/HeadlessInAppWebView/HeadlessInAppWebView.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/HeadlessInAppWebView/HeadlessInAppWebViewManager.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/HeadlessInAppWebView/HeadlessWebViewChannelDelegate.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppBrowser/InAppBrowserChannelDelegate.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppBrowser/InAppBrowserDelegate.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppBrowser/InAppBrowserManager.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppBrowser/InAppBrowserNavigationController.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppBrowser/InAppBrowserSettings.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppBrowser/InAppBrowserWebViewController.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/ContextMenuSettings.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/CustomSchemeHandler.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/FlutterWebViewController.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/FlutterWebViewFactory.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/InAppWebView.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/InAppWebViewManager.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/InAppWebViewSettings.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/WebMessage/WebMessageChannel.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/WebMessage/WebMessageChannelChannelDelegate.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/WebMessage/WebMessageListener.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/WebMessage/WebMessageListenerChannelDelegate.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/WebViewChannelDelegate.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/WebViewChannelDelegateMethods.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/ISettings.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/LeakAvoider.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/MyCookieManager.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/MyWebStorageManager.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PlatformUtil.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/CallAsyncJavaScriptBelowIOS14WrapperJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/ConsoleLogJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/EnableViewportScaleJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/FindElementsAtPointJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/FindTextHighlightJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/InterceptAjaxRequestJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/InterceptFetchRequestJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/JavaScriptBridgeJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/LastTouchedAnchorOrImageJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/OnLoadResourceJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/OnWindowBlurEventJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/OnWindowFocusEventJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/OriginalViewPortMetaTagContentJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/PluginScriptsUtil.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/PrintJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/PromisePolyfillJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/SupportZoomJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/WebMessageChannelJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/WebMessageListenerJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/WindowIdJS.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PrintJob/CustomUIPrintPageRenderer.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PrintJob/PrintAttributes.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PrintJob/PrintJobChannelDelegate.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PrintJob/PrintJobController.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PrintJob/PrintJobInfo.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PrintJob/PrintJobManager.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PrintJob/PrintJobSettings.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PullToRefresh/PullToRefreshChannelDelegate.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PullToRefresh/PullToRefreshControl.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PullToRefresh/PullToRefreshDelegate.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PullToRefresh/PullToRefreshSettings.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/SafariViewController/ChromeSafariBrowserManager.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/SafariViewController/CustomUIActivity.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/SafariViewController/SafariBrowserSettings.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/SafariViewController/SafariViewController.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/SafariViewController/SafariViewControllerChannelDelegate.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/SwiftFlutterPlugin.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/ActivityButton.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/BaseCallbackResult.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/CallbackResult.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/CGRect.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/CGSize.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/ChannelDelegate.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/ClientCertChallenge.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/ClientCertResponse.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/CreateWindowAction.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/CustomSchemeResponse.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/Disposable.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/DownloadStartRequest.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/FlutterMethodCallDelegate.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/FlutterMethodChannel.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/HitTestResult.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/HttpAuthenticationChallenge.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/HttpAuthResponse.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/InAppBrowserMenuItem.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/JsAlertResponse.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/JsConfirmResponse.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/JsPromptResponse.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/MethodChannelResult.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/NSAttributedString.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/PermissionRequest.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/PermissionResponse.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/PluginScript.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/SecCertificate.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/ServerTrustAuthResponse.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/ServerTrustChallenge.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/Size2D.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/SslCertificate.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/SslError.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/StringOrInt.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/UIColor.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/UIEdgeInsets.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/UIEventAttribution.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/UIFindSession.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/UIImage.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/URLAuthenticationChallenge.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/URLCredential.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/URLProtectionSpace.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/URLRequest.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/URLResponse.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/UserScript.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WebMessage.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WebMessagePort.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WebResourceError.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WebResourceRequest.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WebResourceResponse.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WebViewTransport.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WKContentWorld.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WKFrameInfo.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WKNavigationAction.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WKNavigationResponse.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WKSecurityOrigin.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WKUserContentController.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WKWindowFeatures.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/UIApplication/VisibleViewController.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Util.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/WebAuthenticationSession/WebAuthenticationSession.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/WebAuthenticationSession/WebAuthenticationSessionChannelDelegate.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/WebAuthenticationSession/WebAuthenticationSessionManager.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/WebAuthenticationSession/WebAuthenticationSessionSettings.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/WKProcessPoolManager.swift" : {
+
+  }
+}

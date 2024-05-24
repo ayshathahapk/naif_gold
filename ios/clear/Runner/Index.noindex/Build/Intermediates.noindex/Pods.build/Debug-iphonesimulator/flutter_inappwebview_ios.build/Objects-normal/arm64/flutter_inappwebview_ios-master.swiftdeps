@@ -1,0 +1,213 @@
+version: "Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)"
+options: "1023074894075c18fb7d82b49625a5f08bf713e3d4087b5543dcdb634fc30a3f"
+build_start_time: [1717044224, 453981000]
+build_end_time: [1717044224, 477041000]
+inputs:
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/CredentialDatabase.swift": !dirty [1716368722, 463251801]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/FindInteraction/FindInteractionChannelDelegate.swift"
+  : !dirty [1716368722, 433774513]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/FindInteraction/FindInteractionController.swift"
+  : !dirty [1716368722, 429877619]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/FindInteraction/FindInteractionSettings.swift"
+  : !dirty [1716368722, 432987334]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/HeadlessInAppWebView/HeadlessInAppWebView.swift"
+  : !dirty [1716368722, 437756157]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/HeadlessInAppWebView/HeadlessInAppWebViewManager.swift"
+  : !dirty [1716368722, 441422131]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/HeadlessInAppWebView/HeadlessWebViewChannelDelegate.swift"
+  : !dirty [1716368722, 440537159]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/ISettings.swift": !dirty [1716368722, 466186221]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppBrowser/InAppBrowserChannelDelegate.swift"
+  : !dirty [1716368722, 482767560]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppBrowser/InAppBrowserDelegate.swift"
+  : !dirty [1716368722, 482046007]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppBrowser/InAppBrowserManager.swift"
+  : !dirty [1716368722, 472024227]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppBrowser/InAppBrowserNavigationController.swift"
+  : !dirty [1716368722, 481469665]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppBrowser/InAppBrowserSettings.swift"
+  : !dirty [1716368722, 478077112]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppBrowser/InAppBrowserWebViewController.swift"
+  : !dirty [1716368722, 474971565]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/ContextMenuSettings.swift"
+  : !dirty [1716368722, 410734658]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/CustomSchemeHandler.swift"
+  : !dirty [1716368722, 391485944]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/FlutterWebViewController.swift"
+  : !dirty [1716368722, 405762664]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/FlutterWebViewFactory.swift"
+  : !dirty [1716368722, 402748618]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/InAppWebView.swift"
+  : !dirty [1716368722, 399632820]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/InAppWebViewManager.swift"
+  : !dirty [1716368722, 414837554]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/InAppWebViewSettings.swift"
+  : !dirty [1716368722, 394730911]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/WebMessage/WebMessageChannel.swift"
+  : !dirty [1716368722, 413304531]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/WebMessage/WebMessageChannelChannelDelegate.swift"
+  : !dirty [1716368722, 412076928]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/WebMessage/WebMessageListener.swift"
+  : !dirty [1716368722, 411431710]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/WebMessage/WebMessageListenerChannelDelegate.swift"
+  : !dirty [1716368722, 414016333]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/WebViewChannelDelegate.swift"
+  : !dirty [1716368722, 408721502]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/InAppWebView/WebViewChannelDelegateMethods.swift"
+  : !dirty [1716368722, 409902770]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/LeakAvoider.swift": !dirty [1716368722, 537195149]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/MyCookieManager.swift": !dirty [1716368722, 418580529]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/MyWebStorageManager.swift": !dirty [1716368722, 434503357]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PlatformUtil.swift": !dirty [1716368722, 540566826]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/CallAsyncJavaScriptBelowIOS14WrapperJS.swift"
+  : !dirty [1716368722, 442108433]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/ConsoleLogJS.swift"
+  : !dirty [1716368722, 447833230]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/EnableViewportScaleJS.swift"
+  : !dirty [1716368722, 452350216]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/FindElementsAtPointJS.swift"
+  : !dirty [1716368722, 445529777]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/FindTextHighlightJS.swift"
+  : !dirty [1716368722, 447310430]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/InterceptAjaxRequestJS.swift"
+  : !dirty [1716368722, 454861421]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/InterceptFetchRequestJS.swift"
+  : !dirty [1716368722, 450272434]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/JavaScriptBridgeJS.swift"
+  : !dirty [1716368722, 449250543]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/LastTouchedAnchorOrImageJS.swift"
+  : !dirty [1716368722, 453304522]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/OnLoadResourceJS.swift"
+  : !dirty [1716368722, 446768380]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/OnWindowBlurEventJS.swift"
+  : !dirty [1716368722, 453812822]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/OnWindowFocusEventJS.swift"
+  : !dirty [1716368722, 446159579]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/OriginalViewPortMetaTagContentJS.swift"
+  : !dirty [1716368722, 451393493]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/PluginScriptsUtil.swift"
+  : !dirty [1716368722, 444736974]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/PrintJS.swift": !dirty [1716368722, 452859932]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/PromisePolyfillJS.swift"
+  : !dirty [1716368722, 450784192]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/SupportZoomJS.swift"
+  : !dirty [1716368722, 451893709]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/WebMessageChannelJS.swift"
+  : !dirty [1716368722, 448690701]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/WebMessageListenerJS.swift"
+  : !dirty [1716368722, 454434290]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PluginScriptsJS/WindowIdJS.swift"
+  : !dirty [1716368722, 442670025]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PrintJob/CustomUIPrintPageRenderer.swift"
+  : !dirty [1716368722, 462363120]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PrintJob/PrintAttributes.swift": !dirty [1716368722, 460603843]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PrintJob/PrintJobChannelDelegate.swift"
+  : !dirty [1716368722, 460010917]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PrintJob/PrintJobController.swift"
+  : !dirty [1716368722, 462811460]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PrintJob/PrintJobInfo.swift": !dirty [1716368722, 459446992]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PrintJob/PrintJobManager.swift": !dirty [1716368722, 461127018]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PrintJob/PrintJobSettings.swift"
+  : !dirty [1716368722, 461794862]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PullToRefresh/PullToRefreshChannelDelegate.swift"
+  : !dirty [1716368722, 390739474]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PullToRefresh/PullToRefreshControl.swift"
+  : !dirty [1716368722, 389287577]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PullToRefresh/PullToRefreshDelegate.swift"
+  : !dirty [1716368722, 388617233]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/PullToRefresh/PullToRefreshSettings.swift"
+  : !dirty [1716368722, 390007172]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/SafariViewController/ChromeSafariBrowserManager.swift"
+  : !dirty [1716368722, 525932892]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/SafariViewController/CustomUIActivity.swift"
+  : !dirty [1716368722, 525450176]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/SafariViewController/SafariBrowserSettings.swift"
+  : !dirty [1716368722, 529642449]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/SafariViewController/SafariViewController.swift"
+  : !dirty [1716368722, 533644177]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/SafariViewController/SafariViewControllerChannelDelegate.swift"
+  : !dirty [1716368722, 532613078]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/SwiftFlutterPlugin.swift": !dirty [1716368722, 469067890]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/ActivityButton.swift": !dirty [1716368722, 491163814]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/BaseCallbackResult.swift": !dirty [1716368722, 502352695]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/CGRect.swift": !dirty [1716368722, 490028547]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/CGSize.swift": !dirty [1716368722, 510921160]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/CallbackResult.swift": !dirty [1716368722, 495086583]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/ChannelDelegate.swift": !dirty [1716368722, 523821359]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/ClientCertChallenge.swift"
+  : !dirty [1716368722, 517822434]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/ClientCertResponse.swift": !dirty [1716368722, 491656905]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/CreateWindowAction.swift": !dirty [1716368722, 496210517]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/CustomSchemeResponse.swift"
+  : !dirty [1716368722, 522919221]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/Disposable.swift": !dirty [1716368722, 510333651]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/DownloadStartRequest.swift"
+  : !dirty [1716368722, 509526306]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/FlutterMethodCallDelegate.swift"
+  : !dirty [1716368722, 497405994]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/FlutterMethodChannel.swift"
+  : !dirty [1716368722, 506851931]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/HitTestResult.swift": !dirty [1716368722, 517134548]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/HttpAuthResponse.swift": !dirty [1716368722, 522182209]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/HttpAuthenticationChallenge.swift"
+  : !dirty [1716368722, 514817471]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/InAppBrowserMenuItem.swift"
+  : !dirty [1716368722, 508124492]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/JsAlertResponse.swift": !dirty [1716368722, 503677757]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/JsConfirmResponse.swift": !dirty [1716368722, 488830362]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/JsPromptResponse.swift": !dirty [1716368722, 492152913]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/MethodChannelResult.swift"
+  : !dirty [1716368722, 501268887]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/NSAttributedString.swift": !dirty [1716368722, 511913634]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/PermissionRequest.swift": !dirty [1716368722, 511420627]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/PermissionResponse.swift": !dirty [1716368722, 504260683]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/PluginScript.swift": !dirty [1716368722, 486452075]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/SecCertificate.swift": !dirty [1716368722, 503157957]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/ServerTrustAuthResponse.swift"
+  : !dirty [1716368722, 508870546]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/ServerTrustChallenge.swift"
+  : !dirty [1716368722, 496836027]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/Size2D.swift": !dirty [1716368722, 514254545]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/SslCertificate.swift": !dirty [1716368722, 515282811]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/SslError.swift": !dirty [1716368722, 523357186]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/StringOrInt.swift": !dirty [1716368722, 506260589]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/UIColor.swift": !dirty [1716368722, 518455610]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/UIEdgeInsets.swift": !dirty [1716368722, 487008625]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/UIEventAttribution.swift": !dirty [1716368722, 520470974]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/UIFindSession.swift": !dirty [1716368722, 504811025]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/UIImage.swift": !dirty [1716368722, 493216929]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/URLAuthenticationChallenge.swift"
+  : !dirty [1716368722, 513658036]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/URLCredential.swift": !dirty [1716368722, 515889987]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/URLProtectionSpace.swift": !dirty [1716368722, 495588632]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/URLRequest.swift": !dirty [1716368722, 521808245]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/URLResponse.swift": !dirty [1716368722, 516480913]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/UserScript.swift": !dirty [1716368722, 519708546]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WKContentWorld.swift": !dirty [1716368722, 488338687]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WKFrameInfo.swift": !dirty [1716368722, 490613764]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WKNavigationAction.swift": !dirty [1716368722, 494444156]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WKNavigationResponse.swift"
+  : !dirty [1716368722, 493847731]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WKSecurityOrigin.swift": !dirty [1716368722, 521213194]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WKUserContentController.swift"
+  : !dirty [1716368722, 505731455]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WKWindowFeatures.swift": !dirty [1716368722, 513011026]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WebMessage.swift": !dirty [1716368722, 489439913]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WebMessagePort.swift": !dirty [1716368722, 487581342]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WebResourceError.swift": !dirty [1716368722, 501832729]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WebResourceRequest.swift": !dirty [1716368722, 512432100]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WebResourceResponse.swift"
+  : !dirty [1716368722, 507561609]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Types/WebViewTransport.swift": !dirty [1716368722, 519056619]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/UIApplication/VisibleViewController.swift"
+  : !dirty [1716368722, 524272908]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/Util.swift": !dirty [1716368722, 429142192]
+  "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/WKProcessPoolManager.swift": !dirty [1716368722, 455792769]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/WebAuthenticationSession/WebAuthenticationSession.swift"
+  : !dirty [1716368722, 427907922]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/WebAuthenticationSession/WebAuthenticationSessionChannelDelegate.swift"
+  : !dirty [1716368722, 426136395]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/WebAuthenticationSession/WebAuthenticationSessionManager.swift"
+  : !dirty [1716368722, 426904824]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/flutter_inappwebview_ios-1.0.13/ios/Classes/WebAuthenticationSession/WebAuthenticationSessionSettings.swift"
+  : !dirty [1716368722, 425309174]

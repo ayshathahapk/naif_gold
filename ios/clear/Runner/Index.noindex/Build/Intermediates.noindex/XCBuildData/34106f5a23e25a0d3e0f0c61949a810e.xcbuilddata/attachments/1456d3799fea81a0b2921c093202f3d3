@@ -1,0 +1,15 @@
+{
+  "" : {
+    "dependencies" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/Runner.build/Objects-normal/arm64/Runner-master.d",
+    "diagnostics" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/Runner.build/Objects-normal/arm64/Runner-master.dia",
+    "emit-module-dependencies" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/Runner.build/Objects-normal/arm64/Runner-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/Runner.build/Objects-normal/arm64/Runner-master-emit-module.dia",
+    "swift-dependencies" : "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/Runner.build/Objects-normal/arm64/Runner-master.swiftdeps"
+  },
+  "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/Runner.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+
+  },
+  "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/Runner/AppDelegate.swift" : {
+
+  }
+}

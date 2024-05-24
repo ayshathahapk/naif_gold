@@ -1,0 +1,13 @@
+version: "Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)"
+options: "6aae2697e1ca5d2e2c88fbfc0446efbe3a68049cc67ca057b91abebfaee9061a"
+build_start_time: [1717044224, 477148000]
+build_end_time: [1717044224, 599674000]
+inputs:
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/url_launcher_ios-6.3.0/ios/url_launcher_ios/Sources/url_launcher_ios/Launcher.swift"
+  : [1716703139, 603242430]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/url_launcher_ios-6.3.0/ios/url_launcher_ios/Sources/url_launcher_ios/URLLaunchSession.swift"
+  : [1716703139, 603031305]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/url_launcher_ios-6.3.0/ios/url_launcher_ios/Sources/url_launcher_ios/URLLauncherPlugin.swift"
+  : [1716703139, 603465222]
+  ? "/Users/tecnaviswebsolutions/.pub-cache/hosted/pub.dev/url_launcher_ios-6.3.0/ios/url_launcher_ios/Sources/url_launcher_ios/messages.g.swift"
+  : [1716703139, 603653472]

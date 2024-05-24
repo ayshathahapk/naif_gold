@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)"
+options: "8eb5d853bc5e80a20a7d839778c6a117f2c41bcf5cc515cc508fcf26b994db2d"
+build_start_time: [1717044224, 637256000]
+build_end_time: [1717044226, 2687000]
+inputs:
+  "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/Runner/AppDelegate.swift": [1716617816, 367882252]
+  ? "/Users/tecnaviswebsolutions/Documents/naif_gold/ios/clear/Runner/Index.noindex/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/Runner.build/DerivedSources/GeneratedAssetSymbols.swift"
+  : [1717044224, 633181756]
