@@ -48,6 +48,22 @@ dependencies:
   font_awesome_flutter:
   permission_handler:
   path_provider_android: ^2.2.4
+  cached_network_image: ^3.4.1
+  flutter_riverpod: ^2.5.1
+  lottie: ^3.1.2
+  cloud_firestore: ^4.14.0
+  flutter_local_notifications: ^17.2.2
+  fpdart: ^1.1.0
+  firebase_core: ^2.24.2
+  firebase_messaging: ^14.7.10
+  intl: ^0.19.0
+  socket_io_client: ^2.0.3+1
+  auto_scroll_text: ^0.0.7
+  curved_navigation_bar: ^1.0.6
+  device_info_plus: ^10.1.2
+  internet_connection_checker_plus: ^2.5.1
+  flutter_slidable: ^3.1.1
+  flutter_swipe_button: ^2.1.3
 
 
 dev_dependencies:
@@ -79,6 +95,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - asset/images/
+    - asset/icons/
 
 #flutter_launcher_icons:
 #  android: "launcher_icon"
