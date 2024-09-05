@@ -157,6 +157,7 @@ class _LivePageState extends ConsumerState<LivePage> {
   Widget build(BuildContext context) {
     final liveRateData = ref.watch(liveRateProvider);
     return SingleChildScrollView(
+      physics: NeverScrollableScrollPhysics(),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
