@@ -110,9 +110,19 @@ class CustomPoppinsTextStyles {
         color: appTheme.red700,
         fontWeight: FontWeight.w600,
       );
+  static final TextStyle bodyTextSemiBoldWhite = GoogleFonts.poppins(
+      // fontFamily: marine,
+      color: appTheme.black900,
+      fontWeight: FontWeight.w500,
+      fontSize: 18.fSize);
   static get titleSmallWhiteA700SemiBold_1 => GoogleFonts.poppins(
         fontSize: 18.fSize,
         color: appTheme.whiteA700,
         fontWeight: FontWeight.w600,
       );
+  static final TextStyle bodyText4 = GoogleFonts.poppins(
+      // fontFamily: marine,
+      color: appTheme.black900,
+      fontWeight: FontWeight.w600,
+      fontSize: 18.fSize);
 }
