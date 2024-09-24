@@ -156,18 +156,22 @@ class CommodityList extends ConsumerWidget {
                                         ),
                                         Consumer(
                                           builder: (context, refSell, child) {
+                                            final cat =
+                                                price + commodities.sellPremium;
                                             final askNow =
-                                                (price / 31.103) * 3.674;
+                                                (cat / 31.103) * 3.674;
                                             final rateNow = askNow *
-                                                commodities.unit *
-                                                getUnitMultiplier(
-                                                    commodities.weight) *
-                                                (commodities.purity /
-                                                    Math.pow(
-                                                        10,
-                                                        (commodities.purity
-                                                                .toString())
-                                                            .length));
+                                                    (commodities.unit *
+                                                        getUnitMultiplier(
+                                                            commodities
+                                                                .weight)) *
+                                                    (commodities.purity /
+                                                        Math.pow(
+                                                            10,
+                                                            (commodities.purity
+                                                                    .toString())
+                                                                .length)) +
+                                                commodities.sellCharge;
                                             return SizedBox(
                                               width: 130.h,
                                               child: Center(
@@ -223,18 +227,22 @@ class CommodityList extends ConsumerWidget {
                                         ),
                                         Consumer(
                                           builder: (context, refSell, child) {
+                                            final cat =
+                                                price + commodities.sellPremium;
                                             final askNow =
-                                                (price / 31.103) * 3.674;
+                                                (cat / 31.103) * 3.674;
                                             final rateNow = askNow *
-                                                commodities.unit *
-                                                getUnitMultiplier(
-                                                    commodities.weight) *
-                                                (commodities.purity /
-                                                    Math.pow(
-                                                        10,
-                                                        (commodities.purity
-                                                                .toString())
-                                                            .length));
+                                                    (commodities.unit *
+                                                        getUnitMultiplier(
+                                                            commodities
+                                                                .weight)) *
+                                                    (commodities.purity /
+                                                        Math.pow(
+                                                            10,
+                                                            (commodities.purity
+                                                                    .toString())
+                                                                .length)) +
+                                                commodities.sellCharge;
                                             return SizedBox(
                                               width: 130.h,
                                               child: Center(
@@ -299,18 +307,22 @@ class CommodityList extends ConsumerWidget {
                                         ),
                                         Consumer(
                                           builder: (context, refSell, child) {
+                                            final cat =
+                                                price + commodities.sellPremium;
                                             final askNow =
-                                                (price / 31.103) * 3.674;
+                                                (cat / 31.103) * 3.674;
                                             final rateNow = askNow *
-                                                commodities.unit *
-                                                getUnitMultiplier(
-                                                    commodities.weight) *
-                                                (commodities.purity /
-                                                    Math.pow(
-                                                        10,
-                                                        (commodities.purity
-                                                                .toString())
-                                                            .length));
+                                                    (commodities.unit *
+                                                        getUnitMultiplier(
+                                                            commodities
+                                                                .weight)) *
+                                                    (commodities.purity /
+                                                        Math.pow(
+                                                            10,
+                                                            (commodities.purity
+                                                                    .toString())
+                                                                .length)) +
+                                                commodities.sellCharge;
                                             return SizedBox(
                                               width: 130.h,
                                               child: Center(

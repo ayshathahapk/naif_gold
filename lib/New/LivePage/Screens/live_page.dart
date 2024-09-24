@@ -291,10 +291,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                       Column(
                                         children: [
                                           ValueDisplayWidget(
-                                              value: (liveRateData.gold?.bid ??
-                                                  0 +
-                                                      (spreadNow
-                                                          .goldAskSpread))),
+                                              value: (liveRateData.gold!.bid +
+                                                  (spreadNow.goldBidSpread))),
                                           Row(
                                             children: [
                                               Icon(
