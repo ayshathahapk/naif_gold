@@ -154,6 +154,8 @@ class LiveRateNotifier extends StateNotifier<LiveRateModel?> {
     if (response.statusCode == 200) {
       // List<dynamic> data = json.decode(response.body);
       final commudity = GetCommodityModel.fromMap(json.decode(response.body));
+      print("###Commudity List");
+      print(commudity.toMap());
       // return data.map((item) => item.toString()).toList();
 
       return commudity.commodities;
@@ -194,6 +196,8 @@ class LiveRateNotifier extends StateNotifier<LiveRateModel?> {
       _isConnected = true;
       _reconnectAttempts = 0;
       List<String> commodityArray = await fetchCommodityArray();
+      print("###CommudityArray");
+      print(commodityArray);
       _requestMarketData(commodityArray);
     });
 
@@ -241,7 +245,7 @@ class LiveRateNotifier extends StateNotifier<LiveRateModel?> {
 
   void _requestMarketData(List<String> symbols) {
     if (_isConnected) {
-      _socket?.emit('request-data', symbols);
+      _socket?.emit('request-data', ["GOLD, SILVER"]);
     }
   }
 

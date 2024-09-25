@@ -171,7 +171,7 @@ class _NavigationBarState extends ConsumerState<NavigationBarScreen> {
               image: DecorationImage(
                   image: AssetImage(ImageConstants.logoBg), fit: BoxFit.cover)),
           child: CurvedNavigationBar(
-            height: SizeUtils.height * 0.7,
+            height: SizeUtils.height * 0.07,
             key: _bottomNavigationKey,
             index: 0,
             items: <Widget>[
