@@ -79,10 +79,15 @@ class _DetailsState extends ConsumerState<Details> {
     return SafeArea(
       child: Scaffold(
         body: Container(
-          padding: EdgeInsets.all(8.v),
+          padding: EdgeInsets.only(left: 28.h, right: 28.h),
           height: SizeUtils.height,
           width: SizeUtils.width,
-          color: appTheme.mainBlue,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(ImageConstants.logoBg),
+              fit: BoxFit.cover,
+            ),
+          ),
           child: SingleChildScrollView(
             controller: _controller,
             child: Column(
@@ -91,6 +96,7 @@ class _DetailsState extends ConsumerState<Details> {
                   ImageConstants.logo,
                   width: SizeUtils.width * 0.30,
                 ),
+                space(),
                 Text(
                   DateFormat('MMM/dd/yyyy-h:mm:ss a').format(DateTime.now()),
                   style: const TextStyle(
@@ -279,7 +285,7 @@ class _DetailsState extends ConsumerState<Details> {
                                       Text(
                                         "Something Went Wrong",
                                         style:
-                                            CustomPoppinsTextStyles.bodyText1,
+                                            CustomPoppinsTextStyles.bodyTextBnk,
                                       ),
                                       space(),
                                     ],

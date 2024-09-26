@@ -200,12 +200,17 @@ class LiveRateNotifier extends StateNotifier<LiveRateModel?> {
       print(commodityArray);
       _requestMarketData(commodityArray);
     });
-
     _socket?.on('market-data', (data) {
-      if (data != null && data['symbol'] != null) {
+      if (data is Map<String, dynamic> && data['symbol'] is String) {
         marketData[data['symbol']] = data;
-        state = LiveRateModel.fromJson(marketData);
-        // print("Market data updated: ${data['symbol']}");
+        try {
+          state = LiveRateModel.fromJson(marketData);
+        } catch (e) {
+          print("Error parsing market data: $e");
+          // Handle the error appropriately
+        }
+      } else {
+        print("Received invalid market data format");
       }
     });
 
@@ -245,7 +250,7 @@ class LiveRateNotifier extends StateNotifier<LiveRateModel?> {
 
   void _requestMarketData(List<String> symbols) {
     if (_isConnected) {
-      _socket?.emit('request-data', ["GOLD, SILVER"]);
+      _socket?.emit('request-data', [symbols]);
     }
   }
 

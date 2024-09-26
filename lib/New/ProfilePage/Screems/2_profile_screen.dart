@@ -53,7 +53,7 @@ class _ProfileScreen2State extends ConsumerState<ProfileScreen2> {
               SizedBox(height: 10),
               Text(
                 title,
-                style: CustomPoppinsTextStyles.bodyText1,
+                style: CustomPoppinsTextStyles.bodyTextBnk,
               ),
               SizedBox(height: 5),
               Text(
@@ -107,7 +107,7 @@ class _ProfileScreen2State extends ConsumerState<ProfileScreen2> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.all(10.h),
+        padding: EdgeInsets.only(left: 28.h, right: 28.h),
         width: SizeUtils.width,
         height: SizeUtils.height,
         decoration: const BoxDecoration(

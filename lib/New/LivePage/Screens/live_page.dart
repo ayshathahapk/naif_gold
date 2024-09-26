@@ -8,6 +8,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
+import 'package:naif_gold/main.dart';
 import '../../../Core/CommenWidgets/custom_image_view.dart';
 import '../../NewsScreen/Controller/news_controller.dart';
 import '../Controller/live_controller.dart';
@@ -69,6 +70,7 @@ class _LivePageState extends ConsumerState<LivePage> {
   @override
   void dispose() {
     _timer.cancel();
+    _homeController.dispose();
     super.dispose();
   }
 
@@ -111,14 +113,14 @@ class _LivePageState extends ConsumerState<LivePage> {
     return 'Market is closed. It will open in $countdownText.';
   }
 
+  final ScrollController _homeController = ScrollController();
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         SingleChildScrollView(
-          physics: const NeverScrollableScrollPhysics(),
+          controller: _homeController,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -168,11 +170,15 @@ class _LivePageState extends ConsumerState<LivePage> {
                 ],
               ),
               space(),
+              space(),
               Container(
                 height: 55.h,
                 decoration: BoxDecoration(
-                  color: appTheme.gold,
-                  borderRadius: BorderRadius.circular(15.v),
+                  color: const Color(0xFF045147),
+                  // Color(0xFF023930)
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(15.v),
+                      topRight: Radius.circular(15.v)),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -182,12 +188,12 @@ class _LivePageState extends ConsumerState<LivePage> {
                     Row(
                       children: [
                         Text(
-                          "\$BUY",
-                          style: CustomPoppinsTextStyles.bodyText1White,
+                          "BID",
+                          style: CustomPoppinsTextStyles.bodyText1Gold,
                         ),
                         Text(
                           'شراء',
-                          style: CustomPoppinsTextStyles.bodyText1White,
+                          style: CustomPoppinsTextStyles.bodyText1Gold,
                         )
                       ],
                     ),
@@ -195,12 +201,12 @@ class _LivePageState extends ConsumerState<LivePage> {
                     Row(
                       children: [
                         Text(
-                          "\$SELL",
-                          style: CustomPoppinsTextStyles.bodyText1White,
+                          "ASK",
+                          style: CustomPoppinsTextStyles.bodyText1Gold,
                         ),
                         Text(
                           "بيع",
-                          style: CustomPoppinsTextStyles.bodyText1White,
+                          style: CustomPoppinsTextStyles.bodyText1Gold,
                         ),
                       ],
                     ),
@@ -208,7 +214,6 @@ class _LivePageState extends ConsumerState<LivePage> {
                   ],
                 ),
               ),
-              space(),
 
               ///new
               Consumer(
@@ -256,49 +261,62 @@ class _LivePageState extends ConsumerState<LivePage> {
                           );
                           return Column(
                             children: [
-                              Card(
-                                color: Colors.transparent,
-                                child: SizedBox(
-                                  width: SizeUtils.width,
-                                  height: SizeUtils.height * 0.1,
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    children: [
-                                      RichText(
-                                          text: TextSpan(children: [
-                                        TextSpan(
-                                            text: "Gold",
-                                            style: CustomPoppinsTextStyles
-                                                .bodyTextGold),
-                                        TextSpan(
-                                            text: "OZ",
-                                            style: GoogleFonts.poppins(
-                                                // fontFamily: marine,
-                                                color: appTheme.gold,
-                                                fontWeight: FontWeight.w700,
-                                                fontSize: 15.fSize)),
-                                        TextSpan(
-                                            text: "\n ذهب",
-                                            style: GoogleFonts.poppins(
-                                                // fontFamily: marine,
-                                                color: appTheme.gold,
-                                                fontWeight: FontWeight.w700,
-                                                fontSize: 25.fSize)),
-                                      ])),
-                                      Column(
+                              Container(
+                                decoration: const BoxDecoration(
+                                    color: Color(0xFF023930)),
+                                width: SizeUtils.width,
+                                height: SizeUtils.height * 0.15,
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    RichText(
+                                        text: TextSpan(children: [
+                                      TextSpan(
+                                          text: "Gold",
+                                          style: CustomPoppinsTextStyles
+                                              .bodyTextGold),
+                                      TextSpan(
+                                          text: "OZ",
+                                          style: GoogleFonts.poppins(
+                                              // fontFamily: marine,
+                                              color: appTheme.whiteA700,
+                                              fontWeight: FontWeight.w700,
+                                              fontSize: 15.fSize)),
+                                      TextSpan(
+                                          text: "\n ذهب",
+                                          style: GoogleFonts.poppins(
+                                              // fontFamily: marine,
+                                              color: appTheme.whiteA700,
+                                              fontWeight: FontWeight.w700,
+                                              fontSize: 25.fSize)),
+                                    ])),
+                                    Container(
+                                      height: SizeUtils.height * 0.1,
+                                      decoration: BoxDecoration(
+                                        border:
+                                            Border.all(color: appTheme.gray500),
+                                        color: const Color(0xFF045147),
+                                        // Color(0xFF023930)
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(12.v)),
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
                                         children: [
                                           ValueDisplayWidget(
                                               value: (liveRateData.gold!.bid +
                                                   (spreadNow.goldBidSpread))),
+                                          space(h: 5.v),
                                           Row(
                                             children: [
                                               Icon(
                                                 CupertinoIcons
                                                     .arrowtriangle_down_fill,
                                                 color: appTheme.red700,
+                                                size: 20.h,
                                               ),
                                               Text(
                                                 "${liveRateData.gold?.low ?? 0 + (spreadNow.goldLowMargin)}",
@@ -309,7 +327,20 @@ class _LivePageState extends ConsumerState<LivePage> {
                                           )
                                         ],
                                       ),
-                                      Column(
+                                    ),
+                                    Container(
+                                      height: SizeUtils.height * 0.1,
+                                      decoration: BoxDecoration(
+                                        border:
+                                            Border.all(color: appTheme.gray500),
+                                        color: const Color(0xFF045147),
+                                        // Color(0xFF023930)
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(12.v)),
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
                                         children: [
                                           ValueDisplayWidget2(
                                               value: liveRateData.gold?.bid ??
@@ -317,12 +348,16 @@ class _LivePageState extends ConsumerState<LivePage> {
                                                       spreadNow.goldBidSpread +
                                                       spreadNow.goldAskSpread +
                                                       0.5),
+                                          space(
+                                            h: 5,
+                                          ),
                                           Row(
                                             children: [
                                               Icon(
                                                 CupertinoIcons
                                                     .arrowtriangle_up_fill,
                                                 color: appTheme.mainGreen,
+                                                size: 20.h,
                                               ),
                                               Text(
                                                 "${liveRateData.gold?.high ?? 0 + (spreadNow.goldHighMargin)}",
@@ -333,44 +368,58 @@ class _LivePageState extends ConsumerState<LivePage> {
                                           )
                                         ],
                                       ),
-                                    ],
-                                  ),
+                                    ),
+                                  ],
                                 ),
                               ),
-                              space(),
-                              Card(
-                                color: Colors.transparent,
-                                child: SizedBox(
-                                  width: SizeUtils.width,
-                                  height: SizeUtils.height * 0.1,
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    children: [
-                                      RichText(
-                                          text: TextSpan(children: [
-                                        TextSpan(
-                                            text: "Silver",
-                                            style: CustomPoppinsTextStyles
-                                                .bodyTextGold),
-                                        TextSpan(
-                                            text: "OZ",
-                                            style: GoogleFonts.poppins(
-                                                // fontFamily: marine,
-                                                color: appTheme.gold,
-                                                fontWeight: FontWeight.w700,
-                                                fontSize: 15.fSize)),
-                                        TextSpan(
-                                            text: "\n فضة",
-                                            style: GoogleFonts.poppins(
-                                                // fontFamily: marine,
-                                                color: appTheme.gold,
-                                                fontWeight: FontWeight.w700,
-                                                fontSize: 25.fSize)),
-                                      ])),
-                                      Column(
+                              space(h: 1.v),
+                              Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                        bottomRight: Radius.circular(15.h),
+                                        bottomLeft: Radius.circular(15.h)),
+                                    color: const Color(0xFF023930)),
+                                width: SizeUtils.width,
+                                height: SizeUtils.height * 0.15,
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    RichText(
+                                        text: TextSpan(children: [
+                                      TextSpan(
+                                          text: "Silver",
+                                          style: CustomPoppinsTextStyles
+                                              .bodyTextGold),
+                                      TextSpan(
+                                          text: "OZ",
+                                          style: GoogleFonts.poppins(
+                                              // fontFamily: marine,
+                                              color: appTheme.whiteA700,
+                                              fontWeight: FontWeight.w700,
+                                              fontSize: 15.fSize)),
+                                      TextSpan(
+                                          text: "\n فضة",
+                                          style: GoogleFonts.poppins(
+                                              // fontFamily: marine,
+                                              color: appTheme.whiteA700,
+                                              fontWeight: FontWeight.w700,
+                                              fontSize: 25.fSize)),
+                                    ])),
+                                    Container(
+                                      height: SizeUtils.height * 0.1,
+                                      decoration: BoxDecoration(
+                                        border:
+                                            Border.all(color: appTheme.gray500),
+                                        color: const Color(0xFF045147),
+                                        // Color(0xFF023930)
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(12.v)),
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
                                         children: [
                                           ValueDisplayWidgetSilver1(
                                               value: (liveRateData
@@ -379,12 +428,14 @@ class _LivePageState extends ConsumerState<LivePage> {
                                                       (spreadNow
                                                               .silverBidSpread ??
                                                           0))),
+                                          space(h: 5),
                                           Row(
                                             children: [
                                               Icon(
                                                 CupertinoIcons
                                                     .arrowtriangle_down_fill,
                                                 color: appTheme.red700,
+                                                size: 20.h,
                                               ),
                                               Text(
                                                 "${liveRateData.silver?.low ?? 0 + (spreadNow.silverLowMargin)}",
@@ -395,7 +446,20 @@ class _LivePageState extends ConsumerState<LivePage> {
                                           )
                                         ],
                                       ),
-                                      Column(
+                                    ),
+                                    Container(
+                                      height: SizeUtils.height * 0.1,
+                                      decoration: BoxDecoration(
+                                        border:
+                                            Border.all(color: appTheme.gray500),
+                                        color: const Color(0xFF045147),
+                                        // Color(0xFF023930)
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(12.v)),
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
                                         children: [
                                           ValueDisplayWidgetSilver2(
                                               // value: 0,
@@ -409,12 +473,14 @@ class _LivePageState extends ConsumerState<LivePage> {
                                                               .silverAskSpread ??
                                                           0) +
                                                       0.05)),
+                                          space(h: 5),
                                           Row(
                                             children: [
                                               Icon(
                                                 CupertinoIcons
                                                     .arrowtriangle_up_fill,
                                                 color: appTheme.mainGreen,
+                                                size: 20.h,
                                               ),
                                               Text(
                                                 "${liveRateData.silver?.high ?? 0 + (spreadNow.silverHighMargin)}",
@@ -425,8 +491,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                           )
                                         ],
                                       ),
-                                    ],
-                                  ),
+                                    ),
+                                  ],
                                 ),
                               ),
                               space(),
@@ -737,6 +803,7 @@ class _LivePageState extends ConsumerState<LivePage> {
                   );
                 },
               ),
+              space(h: 10.h),
 
               ///new
               Consumer(
@@ -744,7 +811,17 @@ class _LivePageState extends ConsumerState<LivePage> {
                   price: ref2.watch(silverAskPrice),
                 ),
               ),
-
+              space(h: 5.v),
+              Container(
+                width: SizeUtils.width,
+                height: SizeUtils.height * 0.02,
+                decoration: const BoxDecoration(
+                  // border: Border.all(),
+                  color: Color(0xFF045147),
+                  // borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              space(),
               Consumer(
                 builder: (context, ref1, child) {
                   return ref1.watch(newsProvider).when(
@@ -752,7 +829,7 @@ class _LivePageState extends ConsumerState<LivePage> {
                           if (data123 != null) {
                             return AutoScrollText(
                               delayBefore: const Duration(seconds: 3),
-                              "${data123.news.news[0].description}",
+                              data123.news.news[0].description,
                               style: CustomPoppinsTextStyles.bodyText,
                             );
                           } else {
@@ -771,6 +848,7 @@ class _LivePageState extends ConsumerState<LivePage> {
                       );
                 },
               ),
+              space(),
             ],
           ),
         ),

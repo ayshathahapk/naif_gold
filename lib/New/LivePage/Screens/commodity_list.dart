@@ -38,60 +38,66 @@ class CommodityList extends ConsumerWidget {
                 children: [
                   Container(
                     width: SizeUtils.width,
-                    // height: SizeUtils.height * 0.05,
+                    height: SizeUtils.height * 0.07,
                     decoration: BoxDecoration(
-                      // border: Border.all(),
-                      color: appTheme.gold,
-                      borderRadius: BorderRadius.circular(10),
+                      color: const Color(0xFF045147),
+                      // Color(0xFF023930)
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(15.v),
+                          topRight: Radius.circular(15.v)),
                     ),
                     child: Row(
                       children: [
-                        space(w: SizeUtils.width * 0.01),
-                        Column(
-                          children: [
-                            Text(
-                              "COMMODITY",
-                              style: CustomPoppinsTextStyles.bodyText1White,
-                            ),
-                            Text(
-                              "سلعة",
-                              style: CustomPoppinsTextStyles.bodyText1White,
-                            ),
-                          ],
+                        SizedBox(
+                          width: 180.h,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "COMMODITY",
+                                style: CustomPoppinsTextStyles.bodyText1Gold,
+                              ),
+                              Text(
+                                "سلعة",
+                                style: CustomPoppinsTextStyles.bodyText1Gold,
+                              ),
+                            ],
+                          ),
                         ),
-                        space(w: 40.h),
-                        Column(
-                          children: [
-                            Text(
-                              "UNIT",
-                              style: CustomPoppinsTextStyles.bodyText1White,
-                            ),
-                            Text(
-                              "وحدة",
-                              style: CustomPoppinsTextStyles.bodyText1White,
-                            ),
-                          ],
+                        SizedBox(
+                          width: 90.h,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "UNIT",
+                                style: CustomPoppinsTextStyles.bodyText1Gold,
+                              ),
+                              Text(
+                                "وحدة",
+                                style: CustomPoppinsTextStyles.bodyText1Gold,
+                              ),
+                            ],
+                          ),
                         ),
-                        const Spacer(),
-                        // VerticalDivider(
-                        //   color: appTheme.gray700,
-                        // ),
-
-                        Column(
-                          children: [
-                            Text(
-                              "SELL",
-                              textAlign: TextAlign.center,
-                              style: CustomPoppinsTextStyles.bodyText1White,
-                            ),
-                            Text(
-                              "يبيع",
-                              textAlign: TextAlign.center,
-                              style: CustomPoppinsTextStyles.bodyText1White,
-                            ),
-                          ],
+                        SizedBox(
+                          width: 120.h,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "SELL",
+                                textAlign: TextAlign.center,
+                                style: CustomPoppinsTextStyles.bodyText1Gold,
+                              ),
+                              Text(
+                                "يبيع",
+                                textAlign: TextAlign.center,
+                                style: CustomPoppinsTextStyles.bodyText1Gold,
+                              ),
+                            ],
+                          ),
                         ),
-                        const Spacer(),
                       ],
                     ),
                   ),
@@ -106,29 +112,29 @@ class CommodityList extends ConsumerWidget {
                             itemBuilder: (context, index) {
                               // print(commodity[index].toMap());
                               final commodities = commodity[index];
-                              if (commodities.weight == "GM" &&
-                                  commodities.metal == "Gold") {
+                              if (commodities.metal == "Gold") {
                                 return Padding(
                                   padding: EdgeInsets.only(
-                                      top: 8.0.v, bottom: 8.0.v),
+                                    top: 4.0.v,
+                                  ),
                                   child: Container(
                                     width: SizeUtils.width,
                                     height: SizeUtils.height * 0.05,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       // border: Border.all(),
-                                      color: appTheme.whiteA700,
-                                      borderRadius: BorderRadius.circular(10),
+                                      color: Color(0xFF023930),
+                                      // borderRadius: BorderRadius.circular(10),
                                     ),
                                     child: Row(
                                       children: [
                                         SizedBox(
-                                          width: 130.h,
+                                          width: 180.h,
                                           child: Center(
                                             child: RichText(
                                                 text: TextSpan(children: [
                                               TextSpan(
-                                                  text: commodities.metal
-                                                      .toUpperCase(),
+                                                  text:
+                                                      "${commodities.metal.toUpperCase()} ",
                                                   style: CustomPoppinsTextStyles
                                                       .bodyText1),
                                               TextSpan(
@@ -136,7 +142,7 @@ class CommodityList extends ConsumerWidget {
                                                       .toString(),
                                                   style: GoogleFonts.poppins(
                                                       // fontFamily: marine,
-                                                      color: appTheme.black900,
+                                                      color: appTheme.whiteA700,
                                                       fontWeight:
                                                           FontWeight.w600,
                                                       fontSize: 15.fSize))
@@ -144,7 +150,7 @@ class CommodityList extends ConsumerWidget {
                                           ),
                                         ),
                                         SizedBox(
-                                          width: 125.h,
+                                          width: 90.h,
                                           child: Center(
                                             child: Text(
                                               commodities.unit.toString() +
@@ -173,7 +179,88 @@ class CommodityList extends ConsumerWidget {
                                                                 .length)) +
                                                 commodities.sellCharge;
                                             return SizedBox(
-                                              width: 130.h,
+                                              width: 120.h,
+                                              child: Center(
+                                                child: Text(
+                                                  rateNow.toStringAsFixed(2),
+                                                  style: CustomPoppinsTextStyles
+                                                      .bodyText1,
+                                                ),
+                                              ),
+                                            );
+                                          },
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              } else if (commodities.weight == "KG") {
+                                return Padding(
+                                  padding: EdgeInsets.only(
+                                    top: 4.0.v,
+                                  ),
+                                  child: Container(
+                                    width: SizeUtils.width,
+                                    height: SizeUtils.height * 0.05,
+                                    decoration: const BoxDecoration(
+                                      // border: Border.all(),
+                                      color: Color(0xFF023930),
+                                      // borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 180.h,
+                                          child: Center(
+                                            child: RichText(
+                                                text: TextSpan(children: [
+                                              TextSpan(
+                                                  text: "GOLD ",
+                                                  style: CustomPoppinsTextStyles
+                                                      .bodyText1),
+                                              TextSpan(
+                                                  text: commodities.purity
+                                                      .toString(),
+                                                  style: GoogleFonts.poppins(
+                                                      // fontFamily: marine,
+                                                      color: appTheme.mainWhite,
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      fontSize: 15.fSize))
+                                            ])),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 90.h,
+                                          child: Center(
+                                            child: Text(
+                                              commodities.unit.toString() +
+                                                  commodities.weight,
+                                              style: CustomPoppinsTextStyles
+                                                  .bodyText1,
+                                            ),
+                                          ),
+                                        ),
+                                        Consumer(
+                                          builder: (context, refSell, child) {
+                                            final cat =
+                                                price + commodities.sellPremium;
+                                            final askNow =
+                                                (cat / 31.103) * 3.674;
+                                            final rateNow = askNow *
+                                                    (commodities.unit *
+                                                        getUnitMultiplier(
+                                                            commodities
+                                                                .weight)) *
+                                                    (commodities.purity /
+                                                        Math.pow(
+                                                            10,
+                                                            (commodities.purity
+                                                                    .toString())
+                                                                .length)) +
+                                                commodities.sellCharge;
+                                            return SizedBox(
+                                              width: 120.h,
                                               child: Center(
                                                 child: Text(
                                                   rateNow.toStringAsFixed(2),
@@ -191,31 +278,40 @@ class CommodityList extends ConsumerWidget {
                               } else if (commodities.weight == "TTB") {
                                 return Padding(
                                   padding: EdgeInsets.only(
-                                      bottom: 8.0.v, top: 8.0.v),
+                                    top: 4.0.v,
+                                  ),
                                   child: Container(
                                     width: SizeUtils.width,
                                     height: SizeUtils.height * 0.05,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       // border: Border.all(),
-                                      color: appTheme.whiteA700,
-                                      borderRadius: BorderRadius.circular(10),
+                                      color: Color(0xFF023930),
+                                      // borderRadius: BorderRadius.circular(10),
                                     ),
                                     child: Row(
                                       children: [
                                         SizedBox(
-                                          width: 130.h,
+                                          width: 180.h,
                                           child: Center(
                                             child: RichText(
                                                 text: TextSpan(children: [
                                               TextSpan(
-                                                  text: "TEN TOLA",
+                                                  text: "GOLD",
                                                   style: CustomPoppinsTextStyles
                                                       .bodyText1),
+                                              TextSpan(
+                                                  text: "TENTOLA",
+                                                  style: GoogleFonts.poppins(
+                                                      // fontFamily: marine,
+                                                      color: appTheme.whiteA700,
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                      fontSize: 15.fSize))
                                             ])),
                                           ),
                                         ),
                                         SizedBox(
-                                          width: 125.h,
+                                          width: 90.h,
                                           child: Center(
                                             child: Text(
                                               commodities.unit.toString() +
@@ -244,7 +340,7 @@ class CommodityList extends ConsumerWidget {
                                                                 .length)) +
                                                 commodities.sellCharge;
                                             return SizedBox(
-                                              width: 130.h,
+                                              width: 120.h,
                                               child: Center(
                                                 child: Text(
                                                   rateNow.toStringAsFixed(0),
@@ -262,40 +358,32 @@ class CommodityList extends ConsumerWidget {
                               } else {
                                 return Padding(
                                   padding: EdgeInsets.only(
-                                      bottom: 8.0.v, top: 8.0.v),
+                                    top: 4.0.v,
+                                  ),
                                   child: Container(
                                     width: SizeUtils.width,
                                     height: SizeUtils.height * 0.05,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       // border: Border.all(),
-                                      color: appTheme.whiteA700,
-                                      borderRadius: BorderRadius.circular(10),
+                                      color: Color(0xFF023930),
+                                      // borderRadius: BorderRadius.circular(10),
                                     ),
                                     child: Row(
                                       children: [
                                         SizedBox(
-                                          width: 130.h,
+                                          width: 180.h,
                                           child: Center(
                                             child: RichText(
                                                 text: TextSpan(children: [
                                               TextSpan(
-                                                  text: "KILOBAR",
+                                                  text: "MINTEDBARS ",
                                                   style: CustomPoppinsTextStyles
                                                       .bodyText1),
-                                              TextSpan(
-                                                  text: commodities.purity
-                                                      .toString(),
-                                                  style: GoogleFonts.poppins(
-                                                      // fontFamily: marine,
-                                                      color: appTheme.black900,
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                      fontSize: 15.fSize))
                                             ])),
                                           ),
                                         ),
                                         SizedBox(
-                                          width: 125.h,
+                                          width: 90.h,
                                           child: Center(
                                             child: Text(
                                               commodities.unit.toString() +
@@ -324,7 +412,7 @@ class CommodityList extends ConsumerWidget {
                                                                 .length)) +
                                                 commodities.sellCharge;
                                             return SizedBox(
-                                              width: 130.h,
+                                              width: 120.h,
                                               child: Center(
                                                 child: Text(
                                                   rateNow.toStringAsFixed(0),

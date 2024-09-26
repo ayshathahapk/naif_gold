@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:naif_gold/Core/Theme/theme_helper.dart';
@@ -43,6 +44,11 @@ class CustomPoppinsTextStyles {
       fontSize: 18.fSize);
   static final TextStyle bodyText1 = GoogleFonts.poppins(
       // fontFamily: marine,
+      color: appTheme.whiteA700,
+      fontWeight: FontWeight.w500,
+      fontSize: 20.fSize);
+  static final TextStyle bodyTextBnk = GoogleFonts.poppins(
+      // fontFamily: marine,
       color: appTheme.black900,
       fontWeight: FontWeight.w500,
       fontSize: 20.fSize);
@@ -55,12 +61,17 @@ class CustomPoppinsTextStyles {
 
   static final TextStyle bodyTextGold = GoogleFonts.poppins(
       // fontFamily: marine,
-      color: appTheme.gold,
+      color: appTheme.whiteA700,
       fontWeight: FontWeight.w500,
       fontSize: 23.fSize);
   static final TextStyle bodyText1White = GoogleFonts.poppins(
       // fontFamily: marine,
       color: appTheme.whiteA700,
+      fontWeight: FontWeight.w500,
+      fontSize: 20.fSize);
+  static final TextStyle bodyText1Gold = GoogleFonts.poppins(
+      // fontFamily: marine,
+      color: CupertinoColors.systemYellow,
       fontWeight: FontWeight.w500,
       fontSize: 20.fSize);
   static final TextStyle bodyText2White = GoogleFonts.poppins(
