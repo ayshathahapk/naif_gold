@@ -28,6 +28,12 @@ class CommodityList extends ConsumerWidget {
     }
   }
 
+  String dToInt({required double value}) {
+    String formattedValue =
+        value % 1 == 0 ? value.toInt().toString() : value.toString();
+    return formattedValue;
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ref.watch(spotRateProvider).when(
@@ -153,7 +159,7 @@ class CommodityList extends ConsumerWidget {
                                           width: 90.h,
                                           child: Center(
                                             child: Text(
-                                              commodities.unit.toString() +
+                                              dToInt(value: commodities.unit) +
                                                   commodities.weight,
                                               style: CustomPoppinsTextStyles
                                                   .bodyText1,
@@ -234,7 +240,7 @@ class CommodityList extends ConsumerWidget {
                                           width: 90.h,
                                           child: Center(
                                             child: Text(
-                                              commodities.unit.toString() +
+                                              dToInt(value: commodities.unit) +
                                                   commodities.weight,
                                               style: CustomPoppinsTextStyles
                                                   .bodyText1,
@@ -314,7 +320,7 @@ class CommodityList extends ConsumerWidget {
                                           width: 90.h,
                                           child: Center(
                                             child: Text(
-                                              commodities.unit.toString() +
+                                              dToInt(value: commodities.unit) +
                                                   commodities.weight,
                                               style: CustomPoppinsTextStyles
                                                   .bodyText1,
@@ -386,7 +392,7 @@ class CommodityList extends ConsumerWidget {
                                           width: 90.h,
                                           child: Center(
                                             child: Text(
-                                              commodities.unit.toString() +
+                                              dToInt(value: commodities.unit) +
                                                   commodities.weight,
                                               style: CustomPoppinsTextStyles
                                                   .bodyText1,
