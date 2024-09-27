@@ -502,156 +502,11 @@ class _LivePageState extends ConsumerState<LivePage> {
                           print("#########Live Data Is NULL#######");
                           return Column(
                             children: [
-                              Card(
-                                color: Colors.transparent,
-                                child: SizedBox(
-                                  width: SizeUtils.width,
-                                  height: SizeUtils.height * 0.1,
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    children: [
-                                      RichText(
-                                          text: TextSpan(children: [
-                                        TextSpan(
-                                            text: "Gold",
-                                            style: CustomPoppinsTextStyles
-                                                .bodyTextGold),
-                                        TextSpan(
-                                            text: "OZ",
-                                            style: GoogleFonts.poppins(
-                                                // fontFamily: marine,
-                                                color: appTheme.gold,
-                                                fontWeight: FontWeight.w700,
-                                                fontSize: 15.fSize))
-                                      ])),
-                                      Column(
-                                        children: [
-                                          const ValueDisplayWidget(value: 0.0),
-                                          Row(
-                                            children: [
-                                              Icon(
-                                                CupertinoIcons
-                                                    .arrowtriangle_down_fill,
-                                                color: appTheme.red700,
-                                              ),
-                                              Text(
-                                                "0.0",
-                                                style: CustomPoppinsTextStyles
-                                                    .bodyTextSemiBold,
-                                              )
-                                            ],
-                                          )
-                                        ],
-                                      ),
-                                      Column(
-                                        children: [
-                                          const ValueDisplayWidget2(value: 0.0),
-                                          Row(
-                                            children: [
-                                              Icon(
-                                                CupertinoIcons
-                                                    .arrowtriangle_up_fill,
-                                                color: appTheme.mainGreen,
-                                              ),
-                                              Text(
-                                                "0.0",
-                                                style: CustomPoppinsTextStyles
-                                                    .bodyTextSemiBold,
-                                              )
-                                            ],
-                                          )
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              space(),
-                              Card(
-                                color: Colors.transparent,
-                                child: SizedBox(
-                                  width: SizeUtils.width,
-                                  height: SizeUtils.height * 0.1,
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    children: [
-                                      RichText(
-                                          text: TextSpan(children: [
-                                        TextSpan(
-                                            text: "Silver",
-                                            style: CustomPoppinsTextStyles
-                                                .bodyTextGold),
-                                        TextSpan(
-                                            text: "OZ",
-                                            style: GoogleFonts.poppins(
-                                                // fontFamily: marine,
-                                                color: appTheme.gold,
-                                                fontWeight: FontWeight.w700,
-                                                fontSize: 15.fSize))
-                                      ])),
-                                      Column(
-                                        children: [
-                                          const ValueDisplayWidgetSilver1(
-                                              value: 0.0),
-                                          Row(
-                                            children: [
-                                              Icon(
-                                                CupertinoIcons
-                                                    .arrowtriangle_down_fill,
-                                                color: appTheme.red700,
-                                              ),
-                                              Text(
-                                                "0.0",
-                                                style: CustomPoppinsTextStyles
-                                                    .bodyTextSemiBold,
-                                              )
-                                            ],
-                                          )
-                                        ],
-                                      ),
-                                      Column(
-                                        children: [
-                                          const ValueDisplayWidgetSilver2(
-                                              value: 0.0),
-                                          Row(
-                                            children: [
-                                              Icon(
-                                                CupertinoIcons
-                                                    .arrowtriangle_up_fill,
-                                                color: appTheme.mainGreen,
-                                              ),
-                                              Text(
-                                                "0.0",
-                                                style: CustomPoppinsTextStyles
-                                                    .bodyTextSemiBold,
-                                              )
-                                            ],
-                                          )
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              space(),
-                            ],
-                          );
-                        }
-                      } else {
-                        print("#########Spot Rate Is NULL#######");
-                        return Column(
-                          children: [
-                            Card(
-                              color: Colors.transparent,
-                              child: SizedBox(
+                              Container(
+                                decoration: const BoxDecoration(
+                                    color: Color(0xFF023930)),
                                 width: SizeUtils.width,
-                                height: SizeUtils.height * 0.1,
+                                height: SizeUtils.height * 0.15,
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   mainAxisAlignment:
@@ -667,58 +522,99 @@ class _LivePageState extends ConsumerState<LivePage> {
                                           text: "OZ",
                                           style: GoogleFonts.poppins(
                                               // fontFamily: marine,
-                                              color: appTheme.gold,
+                                              color: appTheme.whiteA700,
                                               fontWeight: FontWeight.w700,
-                                              fontSize: 15.fSize))
+                                              fontSize: 15.fSize)),
+                                      TextSpan(
+                                          text: "\n ذهب",
+                                          style: GoogleFonts.poppins(
+                                              // fontFamily: marine,
+                                              color: appTheme.whiteA700,
+                                              fontWeight: FontWeight.w700,
+                                              fontSize: 25.fSize)),
                                     ])),
-                                    Column(
-                                      children: [
-                                        const ValueDisplayWidget(value: 0.0),
-                                        Row(
-                                          children: [
-                                            Icon(
-                                              CupertinoIcons
-                                                  .arrowtriangle_down_fill,
-                                              color: appTheme.red700,
-                                            ),
-                                            Text(
-                                              "0.0",
-                                              style: CustomPoppinsTextStyles
-                                                  .bodyTextSemiBold,
-                                            )
-                                          ],
-                                        )
-                                      ],
+                                    Container(
+                                      height: SizeUtils.height * 0.1,
+                                      decoration: BoxDecoration(
+                                        border:
+                                            Border.all(color: appTheme.gray500),
+                                        color: const Color(0xFF045147),
+                                        // Color(0xFF023930)
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(12.v)),
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          const ValueDisplayWidget(value: 0.0),
+                                          space(h: 5.v),
+                                          Row(
+                                            children: [
+                                              Icon(
+                                                CupertinoIcons
+                                                    .arrowtriangle_down_fill,
+                                                color: appTheme.red700,
+                                                size: 20.h,
+                                              ),
+                                              Text(
+                                                "0.0",
+                                                style: CustomPoppinsTextStyles
+                                                    .bodyTextSemiBold,
+                                              )
+                                            ],
+                                          )
+                                        ],
+                                      ),
                                     ),
-                                    Column(
-                                      children: [
-                                        const ValueDisplayWidget2(value: 0.0),
-                                        Row(
-                                          children: [
-                                            Icon(
-                                              CupertinoIcons
-                                                  .arrowtriangle_up_fill,
-                                              color: appTheme.mainGreen,
-                                            ),
-                                            Text(
-                                              "0.0",
-                                              style: CustomPoppinsTextStyles
-                                                  .bodyTextSemiBold,
-                                            )
-                                          ],
-                                        )
-                                      ],
+                                    Container(
+                                      height: SizeUtils.height * 0.1,
+                                      decoration: BoxDecoration(
+                                        border:
+                                            Border.all(color: appTheme.gray500),
+                                        color: const Color(0xFF045147),
+                                        // Color(0xFF023930)
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(12.v)),
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          const ValueDisplayWidget2(value: 0.0),
+                                          space(
+                                            h: 5,
+                                          ),
+                                          Row(
+                                            children: [
+                                              Icon(
+                                                CupertinoIcons
+                                                    .arrowtriangle_up_fill,
+                                                color: appTheme.mainGreen,
+                                                size: 20.h,
+                                              ),
+                                              Text(
+                                                "0.0",
+                                                style: CustomPoppinsTextStyles
+                                                    .bodyTextSemiBold,
+                                              )
+                                            ],
+                                          )
+                                        ],
+                                      ),
                                     ),
                                   ],
                                 ),
                               ),
-                            ),
-                            space(),
-                            Card(
-                              color: Colors.transparent,
-                              child: SizedBox(
+                              space(h: 1.v),
+                              Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                        bottomRight: Radius.circular(15.h),
+                                        bottomLeft: Radius.circular(15.h)),
+                                    color: const Color(0xFF023930)),
                                 width: SizeUtils.width,
-                                height: SizeUtils.height * 0.1,
+                                height: SizeUtils.height * 0.15,
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   mainAxisAlignment:
@@ -734,20 +630,153 @@ class _LivePageState extends ConsumerState<LivePage> {
                                           text: "OZ",
                                           style: GoogleFonts.poppins(
                                               // fontFamily: marine,
-                                              color: appTheme.gold,
+                                              color: appTheme.whiteA700,
                                               fontWeight: FontWeight.w700,
-                                              fontSize: 15.fSize))
+                                              fontSize: 15.fSize)),
+                                      TextSpan(
+                                          text: "\n فضة",
+                                          style: GoogleFonts.poppins(
+                                              // fontFamily: marine,
+                                              color: appTheme.whiteA700,
+                                              fontWeight: FontWeight.w700,
+                                              fontSize: 25.fSize)),
                                     ])),
-                                    Column(
+                                    Container(
+                                      height: SizeUtils.height * 0.1,
+                                      decoration: BoxDecoration(
+                                        border:
+                                            Border.all(color: appTheme.gray500),
+                                        color: const Color(0xFF045147),
+                                        // Color(0xFF023930)
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(12.v)),
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          const ValueDisplayWidgetSilver1(
+                                              value: 0.0),
+                                          space(h: 5),
+                                          Row(
+                                            children: [
+                                              Icon(
+                                                CupertinoIcons
+                                                    .arrowtriangle_down_fill,
+                                                color: appTheme.red700,
+                                                size: 20.h,
+                                              ),
+                                              Text(
+                                                "0.0",
+                                                style: CustomPoppinsTextStyles
+                                                    .bodyTextSemiBold,
+                                              )
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      height: SizeUtils.height * 0.1,
+                                      decoration: BoxDecoration(
+                                        border:
+                                            Border.all(color: appTheme.gray500),
+                                        color: const Color(0xFF045147),
+                                        // Color(0xFF023930)
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(12.v)),
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          const ValueDisplayWidgetSilver2(
+                                              // value: 0,
+                                              value: 0.0),
+                                          space(h: 5),
+                                          Row(
+                                            children: [
+                                              Icon(
+                                                CupertinoIcons
+                                                    .arrowtriangle_up_fill,
+                                                color: appTheme.mainGreen,
+                                                size: 20.h,
+                                              ),
+                                              Text(
+                                                "0.0",
+                                                style: CustomPoppinsTextStyles
+                                                    .bodyTextSemiBold,
+                                              )
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              space(),
+                            ],
+                          );
+                        }
+                      } else {
+                        print("#########Spot Rate Is NULL#######");
+                        return Column(
+                          children: [
+                            Container(
+                              decoration:
+                                  const BoxDecoration(color: Color(0xFF023930)),
+                              width: SizeUtils.width,
+                              height: SizeUtils.height * 0.15,
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  RichText(
+                                      text: TextSpan(children: [
+                                    TextSpan(
+                                        text: "Gold",
+                                        style: CustomPoppinsTextStyles
+                                            .bodyTextGold),
+                                    TextSpan(
+                                        text: "OZ",
+                                        style: GoogleFonts.poppins(
+                                            // fontFamily: marine,
+                                            color: appTheme.whiteA700,
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 15.fSize)),
+                                    TextSpan(
+                                        text: "\n ذهب",
+                                        style: GoogleFonts.poppins(
+                                            // fontFamily: marine,
+                                            color: appTheme.whiteA700,
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 25.fSize)),
+                                  ])),
+                                  Container(
+                                    height: SizeUtils.height * 0.1,
+                                    decoration: BoxDecoration(
+                                      border:
+                                          Border.all(color: appTheme.gray500),
+                                      color: const Color(0xFF045147),
+                                      // Color(0xFF023930)
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(12.v)),
+                                    ),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       children: [
-                                        const ValueDisplayWidgetSilver1(
-                                            value: 0.0),
+                                        const ValueDisplayWidget(value: 0.0),
+                                        space(h: 5.v),
                                         Row(
                                           children: [
                                             Icon(
                                               CupertinoIcons
                                                   .arrowtriangle_down_fill,
                                               color: appTheme.red700,
+                                              size: 20.h,
                                             ),
                                             Text(
                                               "0.0",
@@ -758,16 +787,32 @@ class _LivePageState extends ConsumerState<LivePage> {
                                         )
                                       ],
                                     ),
-                                    Column(
+                                  ),
+                                  Container(
+                                    height: SizeUtils.height * 0.1,
+                                    decoration: BoxDecoration(
+                                      border:
+                                          Border.all(color: appTheme.gray500),
+                                      color: const Color(0xFF045147),
+                                      // Color(0xFF023930)
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(12.v)),
+                                    ),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       children: [
-                                        const ValueDisplayWidgetSilver2(
-                                            value: 0.0),
+                                        const ValueDisplayWidget2(value: 0.0),
+                                        space(
+                                          h: 5,
+                                        ),
                                         Row(
                                           children: [
                                             Icon(
                                               CupertinoIcons
                                                   .arrowtriangle_up_fill,
                                               color: appTheme.mainGreen,
+                                              size: 20.h,
                                             ),
                                             Text(
                                               "0.0",
@@ -778,8 +823,117 @@ class _LivePageState extends ConsumerState<LivePage> {
                                         )
                                       ],
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            space(h: 1.v),
+                            Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                      bottomRight: Radius.circular(15.h),
+                                      bottomLeft: Radius.circular(15.h)),
+                                  color: const Color(0xFF023930)),
+                              width: SizeUtils.width,
+                              height: SizeUtils.height * 0.15,
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  RichText(
+                                      text: TextSpan(children: [
+                                    TextSpan(
+                                        text: "Silver",
+                                        style: CustomPoppinsTextStyles
+                                            .bodyTextGold),
+                                    TextSpan(
+                                        text: "OZ",
+                                        style: GoogleFonts.poppins(
+                                            // fontFamily: marine,
+                                            color: appTheme.whiteA700,
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 15.fSize)),
+                                    TextSpan(
+                                        text: "\n فضة",
+                                        style: GoogleFonts.poppins(
+                                            // fontFamily: marine,
+                                            color: appTheme.whiteA700,
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 25.fSize)),
+                                  ])),
+                                  Container(
+                                    height: SizeUtils.height * 0.1,
+                                    decoration: BoxDecoration(
+                                      border:
+                                          Border.all(color: appTheme.gray500),
+                                      color: const Color(0xFF045147),
+                                      // Color(0xFF023930)
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(12.v)),
+                                    ),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        const ValueDisplayWidgetSilver1(
+                                            value: 0.0),
+                                        space(h: 5),
+                                        Row(
+                                          children: [
+                                            Icon(
+                                              CupertinoIcons
+                                                  .arrowtriangle_down_fill,
+                                              color: appTheme.red700,
+                                              size: 20.h,
+                                            ),
+                                            Text(
+                                              "0.0",
+                                              style: CustomPoppinsTextStyles
+                                                  .bodyTextSemiBold,
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    height: SizeUtils.height * 0.1,
+                                    decoration: BoxDecoration(
+                                      border:
+                                          Border.all(color: appTheme.gray500),
+                                      color: const Color(0xFF045147),
+                                      // Color(0xFF023930)
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(12.v)),
+                                    ),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        const ValueDisplayWidgetSilver2(
+                                            // value: 0,
+                                            value: 0.0),
+                                        space(h: 5),
+                                        Row(
+                                          children: [
+                                            Icon(
+                                              CupertinoIcons
+                                                  .arrowtriangle_up_fill,
+                                              color: appTheme.mainGreen,
+                                              size: 20.h,
+                                            ),
+                                            Text(
+                                              "0.0",
+                                              style: CustomPoppinsTextStyles
+                                                  .bodyTextSemiBold,
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                             space(),
