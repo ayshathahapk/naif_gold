@@ -11,6 +11,7 @@ import '../../Core/CommenWidgets/custom_text_field.dart';
 import '../../Core/CommenWidgets/space.dart';
 import '../../Core/Theme/new_custom_text_style.dart';
 import '../../Core/Theme/theme_helper.dart';
+import '../../Core/Utils/firebase_constants.dart';
 import '../../Core/Utils/image_constant.dart';
 import '../../Core/Utils/size_utils.dart';
 import '../../Core/Utils/snackbar_dialogs.dart';
@@ -43,7 +44,7 @@ class _DetailsState extends ConsumerState<Details> {
     var data = json.encode({"request": "Request for bankDetails"});
     var dio = Dio();
     var response = await dio.request(
-      'https://api.aurify.ae/user/request-admin/66e126df82676ef03e517753',
+      '${FirebaseConstants.baseUrl}request-admin/${FirebaseConstants.adminId}',
       options: Options(
         method: 'POST',
         headers: headers,
