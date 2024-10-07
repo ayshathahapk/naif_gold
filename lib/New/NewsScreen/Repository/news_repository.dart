@@ -2,7 +2,6 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fpdart/fpdart.dart';
-
 import '../../../Core/Utils/failure.dart';
 import '../../../Core/Utils/firebase_constants.dart';
 import '../../../Core/Utils/type_def.dart';
