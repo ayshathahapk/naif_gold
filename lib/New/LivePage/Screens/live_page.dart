@@ -247,11 +247,10 @@ class _LivePageState extends ConsumerState<LivePage> {
                             );
                             ref1.read(silverAskPrice.notifier).update(
                               (state) {
-                                final res = (liveRateData.gold?.bid ??
-                                    0 +
-                                        (spreadNow.goldAskSpread) +
-                                        (spreadNow.goldBidSpread) +
-                                        0.5);
+                                final res = ((((liveRateData.gold!.bid +
+                                            spreadNow.goldBidSpread) +
+                                        spreadNow.goldAskSpread) +
+                                    0.5));
                                 return res;
                               },
                             );
