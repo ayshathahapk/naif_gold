@@ -269,7 +269,7 @@ class CommodityList extends ConsumerWidget {
                                               width: 120.h,
                                               child: Center(
                                                 child: Text(
-                                                  rateNow.toStringAsFixed(2),
+                                                  "${rateNow.toInt()}",
                                                   style: CustomPoppinsTextStyles
                                                       .bodyText1,
                                                 ),
