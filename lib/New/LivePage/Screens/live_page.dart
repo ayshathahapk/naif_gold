@@ -1016,7 +1016,7 @@ class _LivePageState extends ConsumerState<LivePage> {
                     child: Center(
                       child: AutoScrollText(
                         delayBefore: const Duration(seconds: 3),
-                        getMarketStatus(),
+                        "Market is closed. It will open soon!  Market is closed. It will open soon!",
                         style: CustomPoppinsTextStyles.buttonText,
                       ),
                     ),
