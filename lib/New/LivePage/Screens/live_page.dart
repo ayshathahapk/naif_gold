@@ -343,11 +343,11 @@ class _LivePageState extends ConsumerState<LivePage> {
                                             MainAxisAlignment.start,
                                         children: [
                                           ValueDisplayWidget2(
-                                              value: liveRateData.gold?.bid ??
-                                                  0 +
-                                                      spreadNow.goldBidSpread +
-                                                      spreadNow.goldAskSpread +
-                                                      0.5),
+                                              value: (((liveRateData.gold!.bid +
+                                                          spreadNow
+                                                              .goldBidSpread) +
+                                                      spreadNow.goldAskSpread) +
+                                                  0.5)),
                                           space(
                                             h: 5,
                                           ),
@@ -422,12 +422,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                             MainAxisAlignment.start,
                                         children: [
                                           ValueDisplayWidgetSilver1(
-                                              value: (liveRateData
-                                                      .silver?.bid ??
-                                                  0 +
-                                                      (spreadNow
-                                                              .silverBidSpread ??
-                                                          0))),
+                                              value: (liveRateData.silver!.bid +
+                                                  spreadNow.silverBidSpread)),
                                           space(h: 5),
                                           Row(
                                             children: [
@@ -463,16 +459,13 @@ class _LivePageState extends ConsumerState<LivePage> {
                                         children: [
                                           ValueDisplayWidgetSilver2(
                                               // value: 0,
-                                              value: (liveRateData
-                                                      .silver?.bid ??
-                                                  0 +
-                                                      (spreadNow
-                                                              .silverBidSpread ??
-                                                          0) +
-                                                      (spreadNow
-                                                              .silverAskSpread ??
-                                                          0) +
-                                                      0.05)),
+                                              value: (((liveRateData
+                                                              .silver!.bid +
+                                                          spreadNow
+                                                              .silverBidSpread) +
+                                                      spreadNow
+                                                          .silverAskSpread) +
+                                                  0.05)),
                                           space(h: 5),
                                           Row(
                                             children: [

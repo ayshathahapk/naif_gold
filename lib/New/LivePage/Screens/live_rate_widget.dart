@@ -9,8 +9,7 @@ class ValueDisplayWidgetSilver1 extends StatefulWidget {
   const ValueDisplayWidgetSilver1({super.key, required this.value});
 
   @override
-  _ValueDisplayWidgetSilver1State createState() =>
-      _ValueDisplayWidgetSilver1State();
+  State createState() => _ValueDisplayWidgetSilver1State();
 }
 
 class _ValueDisplayWidgetSilver1State extends State<ValueDisplayWidgetSilver1> {
@@ -133,7 +132,7 @@ class _ValueDisplayWidgetSilver1State extends State<ValueDisplayWidgetSilver1> {
           border: Border.all(color: appTheme.gray500)),
       child: Center(
         child: Text(
-          widget.value.toStringAsFixed(4),
+          widget.value.toStringAsFixed(3),
           style: CustomPoppinsTextStyles.bodyText2,
         ),
       ),
@@ -149,8 +148,7 @@ class ValueDisplayWidgetSilver2 extends StatefulWidget {
   const ValueDisplayWidgetSilver2({super.key, required this.value});
 
   @override
-  _ValueDisplayWidgetSilver2State createState() =>
-      _ValueDisplayWidgetSilver2State();
+  State createState() => _ValueDisplayWidgetSilver2State();
 }
 
 class _ValueDisplayWidgetSilver2State extends State<ValueDisplayWidgetSilver2> {
@@ -273,7 +271,7 @@ class _ValueDisplayWidgetSilver2State extends State<ValueDisplayWidgetSilver2> {
           border: Border.all(color: appTheme.gray500)),
       child: Center(
         child: Text(
-          widget.value.toStringAsFixed(4),
+          widget.value.toStringAsFixed(3),
           style: CustomPoppinsTextStyles.bodyText2,
         ),
       ),
@@ -286,10 +284,10 @@ class _ValueDisplayWidgetSilver2State extends State<ValueDisplayWidgetSilver2> {
 class ValueDisplayWidget extends StatefulWidget {
   final double value;
 
-  const ValueDisplayWidget({Key? key, required this.value}) : super(key: key);
+  const ValueDisplayWidget({super.key, required this.value});
 
   @override
-  _ValueDisplayWidgetState createState() => _ValueDisplayWidgetState();
+  State createState() => _ValueDisplayWidgetState();
 }
 
 class _ValueDisplayWidgetState extends State<ValueDisplayWidget> {
