@@ -120,391 +120,613 @@ class _LivePageState extends ConsumerState<LivePage> {
       children: [
         Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SizedBox(
-                    // width: SizeUtils.width / 3,
-                    child: Column(
-                      children: [
-                        Icon(
-                          CupertinoIcons.calendar,
-                          color: appTheme.whiteA700,
-                        ),
-                        Text(
-                          DateFormat("MMM dd yyyy").format(DateTime.now()),
-                          style: CustomPoppinsTextStyles.bodyText,
-                        ),
-                        Text(
-                            DateFormat("EEEE")
-                                .format(DateTime.now())
-                                .toUpperCase(),
-                            style: CustomPoppinsTextStyles.bodyText)
-                      ],
-                    ),
-                  ),
-                  CustomImageView(
-                    imagePath: ImageConstants.logo,
-                    width: 80.h,
-                  ),
-                  SizedBox(
-                    // width: SizeUtils.width / 3,
-                    child: Column(
-                      children: [
-                        Icon(
-                          CupertinoIcons.time,
-                          color: appTheme.whiteA700,
-                        ),
-                        Consumer(
-                          builder: (context, ref, child) => Text(
-                            ref.watch(formattedTimeProvider),
-                            style: CustomPoppinsTextStyles.bodyText,
-                          ),
-                        ),
-                        space()
-                      ],
-                    ),
-                  )
-                ],
-              ),
-              space(),
-              space(),
-              Container(
-                height: 55.h,
-                decoration: BoxDecoration(
-                  color: const Color(0xFF045147),
-                  // Color(0xFF023930)
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(15.v),
-                      topRight: Radius.circular(15.v)),
-                ),
-                child: Row(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    space(w: 50.h),
-                    const Spacer(),
-                    Row(
-                      children: [
-                        Text(
-                          "BID",
-                          style: CustomPoppinsTextStyles.bodyText1Gold,
-                        ),
-                        Text(
-                          'شراء',
-                          style: CustomPoppinsTextStyles.bodyText1Gold,
-                        )
-                      ],
+                    SizedBox(
+                      // width: SizeUtils.width / 3,
+                      child: Column(
+                        children: [
+                          Icon(
+                            CupertinoIcons.calendar,
+                            color: appTheme.whiteA700,
+                          ),
+                          Text(
+                            DateFormat("MMM dd yyyy").format(DateTime.now()),
+                            style: CustomPoppinsTextStyles.bodyText,
+                          ),
+                          Text(
+                              DateFormat("EEEE")
+                                  .format(DateTime.now())
+                                  .toUpperCase(),
+                              style: CustomPoppinsTextStyles.bodyText)
+                        ],
+                      ),
                     ),
-                    const Spacer(),
-                    Row(
-                      children: [
-                        Text(
-                          "ASK",
-                          style: CustomPoppinsTextStyles.bodyText1Gold,
-                        ),
-                        Text(
-                          "بيع",
-                          style: CustomPoppinsTextStyles.bodyText1Gold,
-                        ),
-                      ],
+                    CustomImageView(
+                      imagePath: ImageConstants.logo,
+                      width: 80.h,
                     ),
-                    space(w: 50.h)
+                    SizedBox(
+                      // width: SizeUtils.width / 3,
+                      child: Column(
+                        children: [
+                          Icon(
+                            CupertinoIcons.time,
+                            color: appTheme.whiteA700,
+                          ),
+                          Consumer(
+                            builder: (context, ref, child) => Text(
+                              ref.watch(formattedTimeProvider),
+                              style: CustomPoppinsTextStyles.bodyText,
+                            ),
+                          ),
+                          space()
+                        ],
+                      ),
+                    )
                   ],
                 ),
-              ),
-
-              ///new
-              Consumer(
-                builder: (context, ref1, child) {
-                  return ref1.watch(spotRateProvider).when(
-                    data: (spotRate) {
-                      if (spotRate != null) {
-                        final liveRateData = ref1.watch(liveRateProvider);
-                        if (liveRateData != null) {
-                          final spreadNow = spotRate.info;
-                          WidgetsBinding.instance.addPostFrameCallback(
-                            (timeStamp) {
-                              ref1.read(bannerBool.notifier).update(
-                                (state) {
-                                  return liveRateData.gold?.marketStatus !=
-                                          "TRADEABLE"
-                                      ? true
-                                      : false;
-                                },
-                              );
-                              ref1.read(rateBidValue.notifier).update(
-                                (state) {
-                                  return liveRateData.gold?.bid ??
-                                      0 + (spreadNow.goldBidSpread);
-                                },
-                              );
-                              ref1.read(goldAskPrice.notifier).update(
-                                (state) {
-                                  final res = (liveRateData.gold?.bid ??
-                                      0 + (spreadNow.goldAskSpread));
-                                  return res;
-                                },
-                              );
-                              ref1.read(silverAskPrice.notifier).update(
-                                (state) {
-                                  final res = ((((liveRateData.gold!.bid +
-                                              spreadNow.goldBidSpread) +
-                                          spreadNow.goldAskSpread) +
-                                      0.5));
-                                  return res;
-                                },
-                              );
-                            },
-                          );
-                          return Column(
-                            children: [
-                              Container(
-                                decoration: const BoxDecoration(
-                                    color: Color(0xFF023930)),
-                                width: SizeUtils.width,
-                                height: SizeUtils.height * 0.15,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: [
-                                    RichText(
-                                        text: TextSpan(children: [
-                                      TextSpan(
-                                          text: "Gold",
-                                          style: CustomPoppinsTextStyles
-                                              .bodyTextGold),
-                                      TextSpan(
-                                          text: "OZ",
-                                          style: GoogleFonts.poppins(
-                                              // fontFamily: marine,
-                                              color: appTheme.whiteA700,
-                                              fontWeight: FontWeight.w700,
-                                              fontSize: 15.fSize)),
-                                      TextSpan(
-                                          text: "\n ذهب",
-                                          style: GoogleFonts.poppins(
-                                              // fontFamily: marine,
-                                              color: appTheme.whiteA700,
-                                              fontWeight: FontWeight.w700,
-                                              fontSize: 25.fSize)),
-                                    ])),
-                                    Container(
-                                      height: SizeUtils.height * 0.1,
-                                      decoration: BoxDecoration(
-                                        border:
-                                            Border.all(color: appTheme.gray500),
-                                        color: const Color(0xFF045147),
-                                        // Color(0xFF023930)
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(12.v)),
+                space(),
+                space(),
+                Container(
+                  height: 55.h,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF045147),
+                    // Color(0xFF023930)
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(15.v),
+                        topRight: Radius.circular(15.v)),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      space(w: 50.h),
+                      const Spacer(),
+                      Row(
+                        children: [
+                          Text(
+                            "BID",
+                            style: CustomPoppinsTextStyles.bodyText1Gold,
+                          ),
+                          Text(
+                            'شراء',
+                            style: CustomPoppinsTextStyles.bodyText1Gold,
+                          )
+                        ],
+                      ),
+                      const Spacer(),
+                      Row(
+                        children: [
+                          Text(
+                            "ASK",
+                            style: CustomPoppinsTextStyles.bodyText1Gold,
+                          ),
+                          Text(
+                            "بيع",
+                            style: CustomPoppinsTextStyles.bodyText1Gold,
+                          ),
+                        ],
+                      ),
+                      space(w: 50.h)
+                    ],
+                  ),
+                ),
+            
+                ///new
+                Consumer(
+                  builder: (context, ref1, child) {
+                    return ref1.watch(spotRateProvider).when(
+                      data: (spotRate) {
+                        if (spotRate != null) {
+                          final liveRateData = ref1.watch(liveRateProvider);
+                          if (liveRateData != null) {
+                            final spreadNow = spotRate.info;
+                            WidgetsBinding.instance.addPostFrameCallback(
+                              (timeStamp) {
+                                ref1.read(bannerBool.notifier).update(
+                                  (state) {
+                                    return liveRateData.gold?.marketStatus !=
+                                            "TRADEABLE"
+                                        ? true
+                                        : false;
+                                  },
+                                );
+                                ref1.read(rateBidValue.notifier).update(
+                                  (state) {
+                                    return liveRateData.gold?.bid ??
+                                        0 + (spreadNow.goldBidSpread);
+                                  },
+                                );
+                                ref1.read(goldAskPrice.notifier).update(
+                                  (state) {
+                                    final res = (liveRateData.gold?.bid ??
+                                        0 + (spreadNow.goldAskSpread));
+                                    return res;
+                                  },
+                                );
+                                ref1.read(silverAskPrice.notifier).update(
+                                  (state) {
+                                    final res = ((((liveRateData.gold!.bid +
+                                                spreadNow.goldBidSpread) +
+                                            spreadNow.goldAskSpread) +
+                                        0.5));
+                                    return res;
+                                  },
+                                );
+                              },
+                            );
+                            return Column(
+                              children: [
+                                Container(
+                                  decoration: const BoxDecoration(
+                                      color: Color(0xFF023930)),
+                                  width: SizeUtils.width,
+                                  height: SizeUtils.height * 0.15,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: [
+                                      RichText(
+                                          text: TextSpan(children: [
+                                        TextSpan(
+                                            text: "Gold",
+                                            style: CustomPoppinsTextStyles
+                                                .bodyTextGold),
+                                        TextSpan(
+                                            text: "OZ",
+                                            style: GoogleFonts.poppins(
+                                                // fontFamily: marine,
+                                                color: appTheme.whiteA700,
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 15.fSize)),
+                                        TextSpan(
+                                            text: "\n ذهب",
+                                            style: GoogleFonts.poppins(
+                                                // fontFamily: marine,
+                                                color: appTheme.whiteA700,
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 25.fSize)),
+                                      ])),
+                                      Container(
+                                        height: SizeUtils.height * 0.1,
+                                        decoration: BoxDecoration(
+                                          border:
+                                              Border.all(color: appTheme.gray500),
+                                          color: const Color(0xFF045147),
+                                          // Color(0xFF023930)
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(12.v)),
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: [
+                                            ValueDisplayWidget(
+                                                value: (liveRateData.gold!.bid +
+                                                    (spreadNow.goldBidSpread))),
+                                            space(h: 5.v),
+                                            Row(
+                                              children: [
+                                                Icon(
+                                                  CupertinoIcons
+                                                      .arrowtriangle_down_fill,
+                                                  color: appTheme.red700,
+                                                  size: 20.h,
+                                                ),
+                                                Text(
+                                                  "${liveRateData.gold?.low ?? 0 + (spreadNow.goldLowMargin)}",
+                                                  style: CustomPoppinsTextStyles
+                                                      .bodyTextSemiBold,
+                                                )
+                                              ],
+                                            )
+                                          ],
+                                        ),
                                       ),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        children: [
-                                          ValueDisplayWidget(
-                                              value: (liveRateData.gold!.bid +
-                                                  (spreadNow.goldBidSpread))),
-                                          space(h: 5.v),
-                                          Row(
-                                            children: [
-                                              Icon(
-                                                CupertinoIcons
-                                                    .arrowtriangle_down_fill,
-                                                color: appTheme.red700,
-                                                size: 20.h,
-                                              ),
-                                              Text(
-                                                "${liveRateData.gold?.low ?? 0 + (spreadNow.goldLowMargin)}",
-                                                style: CustomPoppinsTextStyles
-                                                    .bodyTextSemiBold,
-                                              )
-                                            ],
-                                          )
-                                        ],
+                                      Container(
+                                        height: SizeUtils.height * 0.1,
+                                        decoration: BoxDecoration(
+                                          border:
+                                              Border.all(color: appTheme.gray500),
+                                          color: const Color(0xFF045147),
+                                          // Color(0xFF023930)
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(12.v)),
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: [
+                                            ValueDisplayWidget2(
+                                                value: (((liveRateData.gold!.bid +
+                                                            spreadNow
+                                                                .goldBidSpread) +
+                                                        spreadNow.goldAskSpread) +
+                                                    0.5)),
+                                            space(
+                                              h: 5,
+                                            ),
+                                            Row(
+                                              children: [
+                                                Icon(
+                                                  CupertinoIcons
+                                                      .arrowtriangle_up_fill,
+                                                  color: appTheme.mainGreen,
+                                                  size: 20.h,
+                                                ),
+                                                Text(
+                                                  "${liveRateData.gold?.high ?? 0 + (spreadNow.goldHighMargin)}",
+                                                  style: CustomPoppinsTextStyles
+                                                      .bodyTextSemiBold,
+                                                )
+                                              ],
+                                            )
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                    Container(
-                                      height: SizeUtils.height * 0.1,
-                                      decoration: BoxDecoration(
-                                        border:
-                                            Border.all(color: appTheme.gray500),
-                                        color: const Color(0xFF045147),
-                                        // Color(0xFF023930)
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(12.v)),
-                                      ),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        children: [
-                                          ValueDisplayWidget2(
-                                              value: (((liveRateData.gold!.bid +
-                                                          spreadNow
-                                                              .goldBidSpread) +
-                                                      spreadNow.goldAskSpread) +
-                                                  0.5)),
-                                          space(
-                                            h: 5,
-                                          ),
-                                          Row(
-                                            children: [
-                                              Icon(
-                                                CupertinoIcons
-                                                    .arrowtriangle_up_fill,
-                                                color: appTheme.mainGreen,
-                                                size: 20.h,
-                                              ),
-                                              Text(
-                                                "${liveRateData.gold?.high ?? 0 + (spreadNow.goldHighMargin)}",
-                                                style: CustomPoppinsTextStyles
-                                                    .bodyTextSemiBold,
-                                              )
-                                            ],
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              space(h: 1.v),
-                              Container(
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(
-                                        bottomRight: Radius.circular(15.h),
-                                        bottomLeft: Radius.circular(15.h)),
-                                    color: const Color(0xFF023930)),
-                                width: SizeUtils.width,
-                                height: SizeUtils.height * 0.15,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: [
-                                    RichText(
-                                        text: TextSpan(children: [
-                                      TextSpan(
-                                          text: "Silver",
-                                          style: CustomPoppinsTextStyles
-                                              .bodyTextGold),
-                                      TextSpan(
-                                          text: "OZ",
-                                          style: GoogleFonts.poppins(
-                                              // fontFamily: marine,
-                                              color: appTheme.whiteA700,
-                                              fontWeight: FontWeight.w700,
-                                              fontSize: 15.fSize)),
-                                      TextSpan(
-                                          text: "\n فضة",
-                                          style: GoogleFonts.poppins(
-                                              // fontFamily: marine,
-                                              color: appTheme.whiteA700,
-                                              fontWeight: FontWeight.w700,
-                                              fontSize: 25.fSize)),
-                                    ])),
-                                    Container(
-                                      height: SizeUtils.height * 0.1,
-                                      decoration: BoxDecoration(
-                                        border:
-                                            Border.all(color: appTheme.gray500),
-                                        color: const Color(0xFF045147),
-                                        // Color(0xFF023930)
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(12.v)),
+                                space(h: 1.v),
+                                Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.only(
+                                          bottomRight: Radius.circular(15.h),
+                                          bottomLeft: Radius.circular(15.h)),
+                                      color: const Color(0xFF023930)),
+                                  width: SizeUtils.width,
+                                  height: SizeUtils.height * 0.15,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: [
+                                      RichText(
+                                          text: TextSpan(children: [
+                                        TextSpan(
+                                            text: "Silver",
+                                            style: CustomPoppinsTextStyles
+                                                .bodyTextGold),
+                                        TextSpan(
+                                            text: "OZ",
+                                            style: GoogleFonts.poppins(
+                                                // fontFamily: marine,
+                                                color: appTheme.whiteA700,
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 15.fSize)),
+                                        TextSpan(
+                                            text: "\n فضة",
+                                            style: GoogleFonts.poppins(
+                                                // fontFamily: marine,
+                                                color: appTheme.whiteA700,
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 25.fSize)),
+                                      ])),
+                                      Container(
+                                        height: SizeUtils.height * 0.1,
+                                        decoration: BoxDecoration(
+                                          border:
+                                              Border.all(color: appTheme.gray500),
+                                          color: const Color(0xFF045147),
+                                          // Color(0xFF023930)
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(12.v)),
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: [
+                                            ValueDisplayWidgetSilver1(
+                                                value: (liveRateData.silver!.bid +
+                                                    spreadNow.silverBidSpread)),
+                                            space(h: 5),
+                                            Row(
+                                              children: [
+                                                Icon(
+                                                  CupertinoIcons
+                                                      .arrowtriangle_down_fill,
+                                                  color: appTheme.red700,
+                                                  size: 20.h,
+                                                ),
+                                                Text(
+                                                  (liveRateData.silver?.low ??
+                                                          0 +
+                                                              (spreadNow
+                                                                  .silverLowMargin))
+                                                      .toStringAsFixed(2),
+                                                  style: CustomPoppinsTextStyles
+                                                      .bodyTextSemiBold,
+                                                )
+                                              ],
+                                            )
+                                          ],
+                                        ),
                                       ),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        children: [
-                                          ValueDisplayWidgetSilver1(
-                                              value: (liveRateData.silver!.bid +
-                                                  spreadNow.silverBidSpread)),
-                                          space(h: 5),
-                                          Row(
-                                            children: [
-                                              Icon(
-                                                CupertinoIcons
-                                                    .arrowtriangle_down_fill,
-                                                color: appTheme.red700,
-                                                size: 20.h,
-                                              ),
-                                              Text(
-                                                (liveRateData.silver?.low ??
-                                                        0 +
-                                                            (spreadNow
-                                                                .silverLowMargin))
-                                                    .toStringAsFixed(2),
-                                                style: CustomPoppinsTextStyles
-                                                    .bodyTextSemiBold,
-                                              )
-                                            ],
-                                          )
-                                        ],
+                                      Container(
+                                        height: SizeUtils.height * 0.1,
+                                        decoration: BoxDecoration(
+                                          border:
+                                              Border.all(color: appTheme.gray500),
+                                          color: const Color(0xFF045147),
+                                          // Color(0xFF023930)
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(12.v)),
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: [
+                                            ValueDisplayWidgetSilver2(
+                                                // value: 0,
+                                                value: (((liveRateData
+                                                                .silver!.bid +
+                                                            spreadNow
+                                                                .silverBidSpread) +
+                                                        spreadNow
+                                                            .silverAskSpread) +
+                                                    0.05)),
+                                            space(h: 5),
+                                            Row(
+                                              children: [
+                                                Icon(
+                                                  CupertinoIcons
+                                                      .arrowtriangle_up_fill,
+                                                  color: appTheme.mainGreen,
+                                                  size: 20.h,
+                                                ),
+                                                Text(
+                                                  (liveRateData.silver?.high ??
+                                                          0 +
+                                                              (spreadNow
+                                                                  .silverHighMargin))
+                                                      .toStringAsFixed(2),
+                                                  style: CustomPoppinsTextStyles
+                                                      .bodyTextSemiBold,
+                                                )
+                                              ],
+                                            )
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                    Container(
-                                      height: SizeUtils.height * 0.1,
-                                      decoration: BoxDecoration(
-                                        border:
-                                            Border.all(color: appTheme.gray500),
-                                        color: const Color(0xFF045147),
-                                        // Color(0xFF023930)
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(12.v)),
-                                      ),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        children: [
-                                          ValueDisplayWidgetSilver2(
-                                              // value: 0,
-                                              value: (((liveRateData
-                                                              .silver!.bid +
-                                                          spreadNow
-                                                              .silverBidSpread) +
-                                                      spreadNow
-                                                          .silverAskSpread) +
-                                                  0.05)),
-                                          space(h: 5),
-                                          Row(
-                                            children: [
-                                              Icon(
-                                                CupertinoIcons
-                                                    .arrowtriangle_up_fill,
-                                                color: appTheme.mainGreen,
-                                                size: 20.h,
-                                              ),
-                                              Text(
-                                                (liveRateData.silver?.high ??
-                                                        0 +
-                                                            (spreadNow
-                                                                .silverHighMargin))
-                                                    .toStringAsFixed(2),
-                                                style: CustomPoppinsTextStyles
-                                                    .bodyTextSemiBold,
-                                              )
-                                            ],
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              space(),
-                            ],
-                          );
+                                space(),
+                              ],
+                            );
+                          } else {
+                            print("#########Live Data Is NULL#######");
+                            return Column(
+                              children: [
+                                Container(
+                                  decoration: const BoxDecoration(
+                                      color: Color(0xFF023930)),
+                                  width: SizeUtils.width,
+                                  height: SizeUtils.height * 0.15,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: [
+                                      RichText(
+                                          text: TextSpan(children: [
+                                        TextSpan(
+                                            text: "Gold",
+                                            style: CustomPoppinsTextStyles
+                                                .bodyTextGold),
+                                        TextSpan(
+                                            text: "OZ",
+                                            style: GoogleFonts.poppins(
+                                                // fontFamily: marine,
+                                                color: appTheme.whiteA700,
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 15.fSize)),
+                                        TextSpan(
+                                            text: "\n ذهب",
+                                            style: GoogleFonts.poppins(
+                                                // fontFamily: marine,
+                                                color: appTheme.whiteA700,
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 25.fSize)),
+                                      ])),
+                                      Container(
+                                        height: SizeUtils.height * 0.1,
+                                        decoration: BoxDecoration(
+                                          border:
+                                              Border.all(color: appTheme.gray500),
+                                          color: const Color(0xFF045147),
+                                          // Color(0xFF023930)
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(12.v)),
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: [
+                                            const ValueDisplayWidget(value: 0.0),
+                                            space(h: 5.v),
+                                            Row(
+                                              children: [
+                                                Icon(
+                                                  CupertinoIcons
+                                                      .arrowtriangle_down_fill,
+                                                  color: appTheme.red700,
+                                                  size: 20.h,
+                                                ),
+                                                Text(
+                                                  "0.0",
+                                                  style: CustomPoppinsTextStyles
+                                                      .bodyTextSemiBold,
+                                                )
+                                              ],
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      Container(
+                                        height: SizeUtils.height * 0.1,
+                                        decoration: BoxDecoration(
+                                          border:
+                                              Border.all(color: appTheme.gray500),
+                                          color: const Color(0xFF045147),
+                                          // Color(0xFF023930)
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(12.v)),
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: [
+                                            const ValueDisplayWidget2(value: 0.0),
+                                            space(
+                                              h: 5,
+                                            ),
+                                            Row(
+                                              children: [
+                                                Icon(
+                                                  CupertinoIcons
+                                                      .arrowtriangle_up_fill,
+                                                  color: appTheme.mainGreen,
+                                                  size: 20.h,
+                                                ),
+                                                Text(
+                                                  "0.0",
+                                                  style: CustomPoppinsTextStyles
+                                                      .bodyTextSemiBold,
+                                                )
+                                              ],
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                space(h: 1.v),
+                                Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.only(
+                                          bottomRight: Radius.circular(15.h),
+                                          bottomLeft: Radius.circular(15.h)),
+                                      color: const Color(0xFF023930)),
+                                  width: SizeUtils.width,
+                                  height: SizeUtils.height * 0.15,
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: [
+                                      RichText(
+                                          text: TextSpan(children: [
+                                        TextSpan(
+                                            text: "Silver",
+                                            style: CustomPoppinsTextStyles
+                                                .bodyTextGold),
+                                        TextSpan(
+                                            text: "OZ",
+                                            style: GoogleFonts.poppins(
+                                                // fontFamily: marine,
+                                                color: appTheme.whiteA700,
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 15.fSize)),
+                                        TextSpan(
+                                            text: "\n فضة",
+                                            style: GoogleFonts.poppins(
+                                                // fontFamily: marine,
+                                                color: appTheme.whiteA700,
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 25.fSize)),
+                                      ])),
+                                      Container(
+                                        height: SizeUtils.height * 0.1,
+                                        decoration: BoxDecoration(
+                                          border:
+                                              Border.all(color: appTheme.gray500),
+                                          color: const Color(0xFF045147),
+                                          // Color(0xFF023930)
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(12.v)),
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: [
+                                            const ValueDisplayWidgetSilver1(
+                                                value: 0.0),
+                                            space(h: 5),
+                                            Row(
+                                              children: [
+                                                Icon(
+                                                  CupertinoIcons
+                                                      .arrowtriangle_down_fill,
+                                                  color: appTheme.red700,
+                                                  size: 20.h,
+                                                ),
+                                                Text(
+                                                  "0.0",
+                                                  style: CustomPoppinsTextStyles
+                                                      .bodyTextSemiBold,
+                                                )
+                                              ],
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      Container(
+                                        height: SizeUtils.height * 0.1,
+                                        decoration: BoxDecoration(
+                                          border:
+                                              Border.all(color: appTheme.gray500),
+                                          color: const Color(0xFF045147),
+                                          // Color(0xFF023930)
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(12.v)),
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: [
+                                            const ValueDisplayWidgetSilver2(
+                                                // value: 0,
+                                                value: 0.0),
+                                            space(h: 5),
+                                            Row(
+                                              children: [
+                                                Icon(
+                                                  CupertinoIcons
+                                                      .arrowtriangle_up_fill,
+                                                  color: appTheme.mainGreen,
+                                                  size: 20.h,
+                                                ),
+                                                Text(
+                                                  "0.0",
+                                                  style: CustomPoppinsTextStyles
+                                                      .bodyTextSemiBold,
+                                                )
+                                              ],
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                space(),
+                              ],
+                            );
+                          }
                         } else {
-                          print("#########Live Data Is NULL#######");
+                          print("#########Spot Rate Is NULL#######");
                           return Column(
                             children: [
                               Container(
-                                decoration: const BoxDecoration(
-                                    color: Color(0xFF023930)),
+                                decoration:
+                                    const BoxDecoration(color: Color(0xFF023930)),
                                 width: SizeUtils.width,
                                 height: SizeUtils.height * 0.15,
                                 child: Row(
@@ -719,284 +941,62 @@ class _LivePageState extends ConsumerState<LivePage> {
                             ],
                           );
                         }
-                      } else {
-                        print("#########Spot Rate Is NULL#######");
-                        return Column(
-                          children: [
-                            Container(
-                              decoration:
-                                  const BoxDecoration(color: Color(0xFF023930)),
-                              width: SizeUtils.width,
-                              height: SizeUtils.height * 0.15,
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  RichText(
-                                      text: TextSpan(children: [
-                                    TextSpan(
-                                        text: "Gold",
-                                        style: CustomPoppinsTextStyles
-                                            .bodyTextGold),
-                                    TextSpan(
-                                        text: "OZ",
-                                        style: GoogleFonts.poppins(
-                                            // fontFamily: marine,
-                                            color: appTheme.whiteA700,
-                                            fontWeight: FontWeight.w700,
-                                            fontSize: 15.fSize)),
-                                    TextSpan(
-                                        text: "\n ذهب",
-                                        style: GoogleFonts.poppins(
-                                            // fontFamily: marine,
-                                            color: appTheme.whiteA700,
-                                            fontWeight: FontWeight.w700,
-                                            fontSize: 25.fSize)),
-                                  ])),
-                                  Container(
-                                    height: SizeUtils.height * 0.1,
-                                    decoration: BoxDecoration(
-                                      border:
-                                          Border.all(color: appTheme.gray500),
-                                      color: const Color(0xFF045147),
-                                      // Color(0xFF023930)
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(12.v)),
-                                    ),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        const ValueDisplayWidget(value: 0.0),
-                                        space(h: 5.v),
-                                        Row(
-                                          children: [
-                                            Icon(
-                                              CupertinoIcons
-                                                  .arrowtriangle_down_fill,
-                                              color: appTheme.red700,
-                                              size: 20.h,
-                                            ),
-                                            Text(
-                                              "0.0",
-                                              style: CustomPoppinsTextStyles
-                                                  .bodyTextSemiBold,
-                                            )
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                  Container(
-                                    height: SizeUtils.height * 0.1,
-                                    decoration: BoxDecoration(
-                                      border:
-                                          Border.all(color: appTheme.gray500),
-                                      color: const Color(0xFF045147),
-                                      // Color(0xFF023930)
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(12.v)),
-                                    ),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        const ValueDisplayWidget2(value: 0.0),
-                                        space(
-                                          h: 5,
-                                        ),
-                                        Row(
-                                          children: [
-                                            Icon(
-                                              CupertinoIcons
-                                                  .arrowtriangle_up_fill,
-                                              color: appTheme.mainGreen,
-                                              size: 20.h,
-                                            ),
-                                            Text(
-                                              "0.0",
-                                              style: CustomPoppinsTextStyles
-                                                  .bodyTextSemiBold,
-                                            )
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            space(h: 1.v),
-                            Container(
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      bottomRight: Radius.circular(15.h),
-                                      bottomLeft: Radius.circular(15.h)),
-                                  color: const Color(0xFF023930)),
-                              width: SizeUtils.width,
-                              height: SizeUtils.height * 0.15,
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  RichText(
-                                      text: TextSpan(children: [
-                                    TextSpan(
-                                        text: "Silver",
-                                        style: CustomPoppinsTextStyles
-                                            .bodyTextGold),
-                                    TextSpan(
-                                        text: "OZ",
-                                        style: GoogleFonts.poppins(
-                                            // fontFamily: marine,
-                                            color: appTheme.whiteA700,
-                                            fontWeight: FontWeight.w700,
-                                            fontSize: 15.fSize)),
-                                    TextSpan(
-                                        text: "\n فضة",
-                                        style: GoogleFonts.poppins(
-                                            // fontFamily: marine,
-                                            color: appTheme.whiteA700,
-                                            fontWeight: FontWeight.w700,
-                                            fontSize: 25.fSize)),
-                                  ])),
-                                  Container(
-                                    height: SizeUtils.height * 0.1,
-                                    decoration: BoxDecoration(
-                                      border:
-                                          Border.all(color: appTheme.gray500),
-                                      color: const Color(0xFF045147),
-                                      // Color(0xFF023930)
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(12.v)),
-                                    ),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        const ValueDisplayWidgetSilver1(
-                                            value: 0.0),
-                                        space(h: 5),
-                                        Row(
-                                          children: [
-                                            Icon(
-                                              CupertinoIcons
-                                                  .arrowtriangle_down_fill,
-                                              color: appTheme.red700,
-                                              size: 20.h,
-                                            ),
-                                            Text(
-                                              "0.0",
-                                              style: CustomPoppinsTextStyles
-                                                  .bodyTextSemiBold,
-                                            )
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                  Container(
-                                    height: SizeUtils.height * 0.1,
-                                    decoration: BoxDecoration(
-                                      border:
-                                          Border.all(color: appTheme.gray500),
-                                      color: const Color(0xFF045147),
-                                      // Color(0xFF023930)
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(12.v)),
-                                    ),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        const ValueDisplayWidgetSilver2(
-                                            // value: 0,
-                                            value: 0.0),
-                                        space(h: 5),
-                                        Row(
-                                          children: [
-                                            Icon(
-                                              CupertinoIcons
-                                                  .arrowtriangle_up_fill,
-                                              color: appTheme.mainGreen,
-                                              size: 20.h,
-                                            ),
-                                            Text(
-                                              "0.0",
-                                              style: CustomPoppinsTextStyles
-                                                  .bodyTextSemiBold,
-                                            )
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            space(),
-                          ],
+                      },
+                      error: (error, stackTrace) {
+                        print("###Live Page Error ERROR###");
+                        print(error.toString());
+                        print(stackTrace);
+                        return const Center(
+                          child: Text("Something Went Wrong"),
                         );
-                      }
-                    },
-                    error: (error, stackTrace) {
-                      print("###Live Page Error ERROR###");
-                      print(error.toString());
-                      print(stackTrace);
-                      return const Center(
-                        child: Text("Something Went Wrong"),
-                      );
-                    },
-                    loading: () {
-                      return const Center(
-                        child: CircularProgressIndicator(),
-                      );
-                    },
-                  );
-                },
-              ),
-              space(h: 10.h),
-
-              ///new
-              Consumer(
-                builder: (context, ref2, child) => CommodityList(
-                  price: ref2.watch(silverAskPrice),
+                      },
+                      loading: () {
+                        return const Center(
+                          child: CircularProgressIndicator(),
+                        );
+                      },
+                    );
+                  },
                 ),
-              ),
-
-              space(h: 10.v),
-              Consumer(
-                builder: (context, ref1, child) {
-                  return ref1.watch(newsProvider).when(
-                        data: (data123) {
-                          if (data123 != null && data123.news.news.isNotEmpty) {
-                            print("**********************************");
-                            print(data123.news.toMap());
-                            return AutoScrollText(
-                              delayBefore: const Duration(seconds: 3),
-                              data123.news.news[0].description,
-                              style: CustomPoppinsTextStyles.bodyText,
-                            );
-                          } else {
-                            return AutoScrollText(
-                              delayBefore: const Duration(seconds: 3),
-                              "NAIF GOLD NAIF GOLD NAIF GOLD NAIF GOLD NAIF GOLD NAIF GOLD ",
-                              style: CustomPoppinsTextStyles.bodyText,
-                            );
-                          }
-                        },
-                        error: (error, stackTrace) {
-                          print(stackTrace);
-                          print(error.toString());
-                          return const SizedBox();
-                        },
-                        loading: () => const SizedBox(),
-                      );
-                },
-              ),
-            ],
+                space(h: 10.h),
+            
+                ///new
+                Consumer(
+                  builder: (context, ref2, child) => CommodityList(
+                    price: ref2.watch(silverAskPrice),
+                  ),
+                ),
+            
+                space(h: 10.v),
+                Consumer(
+                  builder: (context, ref1, child) {
+                    return ref1.watch(newsProvider).when(
+                          data: (data123) {
+                            if (data123 != null) {
+                              return AutoScrollText(
+                                delayBefore: const Duration(seconds: 3),
+                                data123.news.news[0].description,
+                                style: CustomPoppinsTextStyles.bodyText,
+                              );
+                            } else {
+                              return AutoScrollText(
+                                delayBefore: const Duration(seconds: 3),
+                                "NAIF GOLD NAIF GOLD NAIF GOLD NAIF GOLD NAIF GOLD NAIF GOLD ",
+                                style: CustomPoppinsTextStyles.bodyText,
+                              );
+                            }
+                          },
+                          error: (error, stackTrace) {
+                            print(stackTrace);
+                            print(error.toString());
+                            return const SizedBox();
+                          },
+                          loading: () => const SizedBox(),
+                        );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
         Positioned(
