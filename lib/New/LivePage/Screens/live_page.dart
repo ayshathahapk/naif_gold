@@ -215,7 +215,7 @@ class _LivePageState extends ConsumerState<LivePage> {
                     ],
                   ),
                 ),
-            
+
                 ///new
                 Consumer(
                   builder: (context, ref1, child) {
@@ -267,7 +267,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                   width: SizeUtils.width,
                                   height: SizeUtils.height * 0.15,
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceAround,
                                     children: [
@@ -295,8 +296,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                       Container(
                                         height: SizeUtils.height * 0.1,
                                         decoration: BoxDecoration(
-                                          border:
-                                              Border.all(color: appTheme.gray500),
+                                          border: Border.all(
+                                              color: appTheme.gray500),
                                           color: const Color(0xFF045147),
                                           // Color(0xFF023930)
                                           borderRadius: BorderRadius.all(
@@ -331,8 +332,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                       Container(
                                         height: SizeUtils.height * 0.1,
                                         decoration: BoxDecoration(
-                                          border:
-                                              Border.all(color: appTheme.gray500),
+                                          border: Border.all(
+                                              color: appTheme.gray500),
                                           color: const Color(0xFF045147),
                                           // Color(0xFF023930)
                                           borderRadius: BorderRadius.all(
@@ -343,10 +344,12 @@ class _LivePageState extends ConsumerState<LivePage> {
                                               MainAxisAlignment.start,
                                           children: [
                                             ValueDisplayWidget2(
-                                                value: (((liveRateData.gold!.bid +
+                                                value: (((liveRateData
+                                                                .gold!.bid +
                                                             spreadNow
                                                                 .goldBidSpread) +
-                                                        spreadNow.goldAskSpread) +
+                                                        spreadNow
+                                                            .goldAskSpread) +
                                                     0.5)),
                                             space(
                                               h: 5,
@@ -382,7 +385,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                   width: SizeUtils.width,
                                   height: SizeUtils.height * 0.15,
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceAround,
                                     children: [
@@ -410,8 +414,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                       Container(
                                         height: SizeUtils.height * 0.1,
                                         decoration: BoxDecoration(
-                                          border:
-                                              Border.all(color: appTheme.gray500),
+                                          border: Border.all(
+                                              color: appTheme.gray500),
                                           color: const Color(0xFF045147),
                                           // Color(0xFF023930)
                                           borderRadius: BorderRadius.all(
@@ -422,7 +426,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                               MainAxisAlignment.start,
                                           children: [
                                             ValueDisplayWidgetSilver1(
-                                                value: (liveRateData.silver!.bid +
+                                                value: (liveRateData
+                                                        .silver!.bid +
                                                     spreadNow.silverBidSpread)),
                                             space(h: 5),
                                             Row(
@@ -450,8 +455,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                       Container(
                                         height: SizeUtils.height * 0.1,
                                         decoration: BoxDecoration(
-                                          border:
-                                              Border.all(color: appTheme.gray500),
+                                          border: Border.all(
+                                              color: appTheme.gray500),
                                           color: const Color(0xFF045147),
                                           // Color(0xFF023930)
                                           borderRadius: BorderRadius.all(
@@ -509,7 +514,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                   width: SizeUtils.width,
                                   height: SizeUtils.height * 0.15,
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceAround,
                                     children: [
@@ -537,8 +543,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                       Container(
                                         height: SizeUtils.height * 0.1,
                                         decoration: BoxDecoration(
-                                          border:
-                                              Border.all(color: appTheme.gray500),
+                                          border: Border.all(
+                                              color: appTheme.gray500),
                                           color: const Color(0xFF045147),
                                           // Color(0xFF023930)
                                           borderRadius: BorderRadius.all(
@@ -548,7 +554,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                           mainAxisAlignment:
                                               MainAxisAlignment.start,
                                           children: [
-                                            const ValueDisplayWidget(value: 0.0),
+                                            const ValueDisplayWidget(
+                                                value: 0.0),
                                             space(h: 5.v),
                                             Row(
                                               children: [
@@ -571,8 +578,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                       Container(
                                         height: SizeUtils.height * 0.1,
                                         decoration: BoxDecoration(
-                                          border:
-                                              Border.all(color: appTheme.gray500),
+                                          border: Border.all(
+                                              color: appTheme.gray500),
                                           color: const Color(0xFF045147),
                                           // Color(0xFF023930)
                                           borderRadius: BorderRadius.all(
@@ -582,7 +589,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                           mainAxisAlignment:
                                               MainAxisAlignment.start,
                                           children: [
-                                            const ValueDisplayWidget2(value: 0.0),
+                                            const ValueDisplayWidget2(
+                                                value: 0.0),
                                             space(
                                               h: 5,
                                             ),
@@ -617,7 +625,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                   width: SizeUtils.width,
                                   height: SizeUtils.height * 0.15,
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceAround,
                                     children: [
@@ -645,8 +654,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                       Container(
                                         height: SizeUtils.height * 0.1,
                                         decoration: BoxDecoration(
-                                          border:
-                                              Border.all(color: appTheme.gray500),
+                                          border: Border.all(
+                                              color: appTheme.gray500),
                                           color: const Color(0xFF045147),
                                           // Color(0xFF023930)
                                           borderRadius: BorderRadius.all(
@@ -680,8 +689,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                       Container(
                                         height: SizeUtils.height * 0.1,
                                         decoration: BoxDecoration(
-                                          border:
-                                              Border.all(color: appTheme.gray500),
+                                          border: Border.all(
+                                              color: appTheme.gray500),
                                           color: const Color(0xFF045147),
                                           // Color(0xFF023930)
                                           borderRadius: BorderRadius.all(
@@ -725,8 +734,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                           return Column(
                             children: [
                               Container(
-                                decoration:
-                                    const BoxDecoration(color: Color(0xFF023930)),
+                                decoration: const BoxDecoration(
+                                    color: Color(0xFF023930)),
                                 width: SizeUtils.width,
                                 height: SizeUtils.height * 0.15,
                                 child: Row(
@@ -959,23 +968,24 @@ class _LivePageState extends ConsumerState<LivePage> {
                   },
                 ),
                 space(h: 10.h),
-            
+
                 ///new
                 Consumer(
                   builder: (context, ref2, child) => CommodityList(
                     price: ref2.watch(silverAskPrice),
                   ),
                 ),
-            
+
                 space(h: 10.v),
                 Consumer(
                   builder: (context, ref1, child) {
                     return ref1.watch(newsProvider).when(
                           data: (data123) {
-                            if (data123 != null) {
+                            if (data123 != null &&
+                                data123.news.news.isNotEmpty) {
                               return AutoScrollText(
                                 delayBefore: const Duration(seconds: 3),
-                                data123.news.news[0].description,
+                                "${data123.news.news[0].description}  ${data123.news.news[0].description}  ${data123.news.news[0].description}",
                                 style: CustomPoppinsTextStyles.bodyText,
                               );
                             } else {
