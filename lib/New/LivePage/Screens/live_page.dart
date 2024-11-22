@@ -971,7 +971,9 @@ class _LivePageState extends ConsumerState<LivePage> {
                 builder: (context, ref1, child) {
                   return ref1.watch(newsProvider).when(
                         data: (data123) {
-                          if (data123 != null) {
+                          if (data123 != null && data123.news.news.isNotEmpty) {
+                            print("**********************************");
+                            print(data123.news.toMap());
                             return AutoScrollText(
                               delayBefore: const Duration(seconds: 3),
                               data123.news.news[0].description,
