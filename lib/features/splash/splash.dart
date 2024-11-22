@@ -75,20 +75,20 @@ class _SplashState extends State<Splash> {
                 'asset/images/Naif-Logo.png',
               ),
             ),
-            SizedBox(
-                height: 1), // Add some space between the image and the text
-            Container(
-              color: Color(0xFF124139),
-              child: Text(
-                'DUBAI       ABU DHABI     AL AIN' ' SHARJAH  KSA',
-                style: TextStyle(
-                    color: Color(
-                        0xFFBFA13A), // White text color for better visibility on a black background
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold),
-                textAlign: TextAlign.center,
-              ),
-            ),
+            // SizedBox(
+            //     height: 1), // Add some space between the image and the text
+            // Container(
+            //   color: Color(0xFF124139),
+            //   child: Text(
+            //     'DUBAI       ABU DHABI     AL AIN' ' SHARJAH  KSA',
+            //     style: TextStyle(
+            //         color: Color(
+            //             0xFFBFA13A), // White text color for better visibility on a black background
+            //         fontSize: 20,
+            //         fontWeight: FontWeight.bold),
+            //     textAlign: TextAlign.center,
+            //   ),
+            // ),
           ],
         ),
       ),
